@@ -1,0 +1,12 @@
+{
+  "name": "Agenda MBA ICEX",
+  "short_name": "Agenda MBA",
+  "description": "Horario, entregas y exámenes del MBA ICEX (Grupo C)",
+  "lang": "es",
+  "start_url": "./#hoy",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f6f8",
+  "theme_color": "#1F3A5F",
+  "icons": [{ "src": "icono.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

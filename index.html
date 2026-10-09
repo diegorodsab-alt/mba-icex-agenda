@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Horario, entregas y exámenes del MBA ICEX (Grupo C), con calendario para suscribirse.">
+  <meta name="theme-color" content="#1F3A5F" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F172A" media="(prefers-color-scheme: dark)">
+  <title>Agenda MBA ICEX</title>
+  <link rel="icon" href="icono.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icono.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="estilos.css?v=58007f184b">
+  <script type="module" src="app.js?v=58007f184b"></script>
+</head>
+<body>
+  <a class="saltar" href="#principal">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <div class="contenedor cabecera__fila">
+      <div>
+        <h1 class="cabecera__titulo">Agenda MBA ICEX</h1>
+        <p class="cabecera__sub"><span id="grupo">Grupo C</span> · <span id="actualizado" aria-live="polite">cargando…</span></p>
+      </div>
+      <label class="filtro">
+        <span class="sr">Filtrar por asignatura</span>
+        <select id="filtro" disabled>
+          <option value="">Todas las asignaturas</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <nav class="pestanas" aria-label="Secciones">
+    <ul class="contenedor pestanas__lista">
+      <li><a href="#hoy" data-vista="hoy"><span class="pestanas__icono" aria-hidden="true">☀️</span>Hoy</a></li>
+      <li><a href="#entregas" data-vista="entregas"><span class="pestanas__icono" aria-hidden="true">📤</span>Entregas</a></li>
+      <li><a href="#examenes" data-vista="examenes"><span class="pestanas__icono" aria-hidden="true">🎯</span>Exámenes</a></li>
+      <li><a href="#horario" data-vista="horario"><span class="pestanas__icono" aria-hidden="true">🗓️</span>Horario</a></li>
+      <li><a href="#calendario" data-vista="calendario"><span class="pestanas__icono" aria-hidden="true">🔔</span>Calendario</a></li>
+    </ul>
+  </nav>
+
+  <main id="principal" class="contenedor" tabindex="-1">
+    <div id="aviso" class="aviso" role="status" hidden></div>
+    <div id="vista" aria-busy="true">
+      <p class="vacio">Cargando la agenda…</p>
+    </div>
+    <noscript><p class="aviso aviso--error">Esta agenda necesita JavaScript. Puedes suscribirte directamente al
+      <a href="calendario.ics">calendario</a>.</p></noscript>
+  </main>
+
+  <footer class="pie contenedor">
+    <p>Generado a partir del horario oficial, Moodle y la guía del máster. Puede contener errores:
+      ante la duda, manda lo que diga <a id="enlace-moodle" href="https://lms.icex.es" rel="noopener">Moodle</a>.</p>
+    <p>Lo que marcas como hecho se guarda solo en este navegador.</p>
+  </footer>
+</body>
+</html>
