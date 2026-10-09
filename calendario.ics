@@ -10,7 +10,7 @@ SUMMARY:Inaguración del MÁSTER UNIVERSITARIO EN GESTIÓN INTERNACIONAL D
  E LA EMPRESA / MBA IN INTERNATIONAL MANAGEMENT 2026-2027
 DTSTART:20261001T100000Z
 DTEND:20261001T120000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:d96827dde1b38c52768c@mba-icex-agenda
 DESCRIPTION:\n\nAgenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 LOCATION:Salón de Actos IEF (Ed. A)
@@ -19,7 +19,7 @@ BEGIN:VEVENT
 SUMMARY:Presentación del Máster.
 DTSTART:20261002T100000Z
 DTEND:20261002T120000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:7b159f4148384d166d5e@mba-icex-agenda
 DESCRIPTION:Miguel Ángel Feito Hernandez\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -29,7 +29,7 @@ BEGIN:VEVENT
 SUMMARY:Habilidades directivas · S1
 DTSTART:20261005T073000Z
 DTEND:20261005T090000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:0bad06019d08c0a11159@mba-icex-agenda
 DESCRIPTION:Hayley Dormand\n\nAgenda: https://diegorodsab-alt.github.io/mb
  a-icex-agenda/
@@ -39,7 +39,7 @@ BEGIN:VEVENT
 SUMMARY:Marketing · S1
 DTSTART:20261005T091500Z
 DTEND:20261005T104500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:a95e6219fb32f121532c@mba-icex-agenda
 DESCRIPTION:Isabel María Muñoz Torrente\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -49,7 +49,7 @@ BEGIN:VEVENT
 SUMMARY:Contabilidad y finanzas · S1
 DTSTART:20261005T111500Z
 DTEND:20261005T124500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:998935904ce96da8d0b3@mba-icex-agenda
 DESCRIPTION:Se recomienda que los alumnos acudan a cada sesión habiendo l
  eído la nota técnica y/o preparado el caso que se menciona en el Silabo
@@ -61,7 +61,7 @@ BEGIN:VEVENT
 SUMMARY:Dirección estratégica · S1
 DTSTART:20261006T073000Z
 DTEND:20261006T090000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:cfcbe76d29afd6cd1864@mba-icex-agenda
 DESCRIPTION:Lecturas obligatorias siguiendo el Silabo.\nJavier Ruiz De Oje
  da Zurita\n\nAgenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -71,7 +71,7 @@ BEGIN:VEVENT
 SUMMARY:Investigación Comercial II · S1
 DTSTART:20261006T091500Z
 DTEND:20261006T104500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:5643af39a7ac31831c27@mba-icex-agenda
 DESCRIPTION:Sandra Tobalina Saiz\n\nAgenda: https://diegorodsab-alt.github
  .io/mba-icex-agenda/
@@ -81,7 +81,7 @@ BEGIN:VEVENT
 SUMMARY:Economía · S1
 DTSTART:20261007T073000Z
 DTEND:20261007T090000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:e6660cc700c1b49e498f@mba-icex-agenda
 DESCRIPTION:Se recomienda\, antes de la 1ª sesión\, leer el capítulo 1 
  del libro Mankiw que se les recomienda en el silabo.\nJose Andres Fernande
@@ -92,7 +92,7 @@ BEGIN:VEVENT
 SUMMARY:Investigación Comercial I · S1
 DTSTART:20261007T091500Z
 DTEND:20261007T104500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:829adcfccefb538b6270@mba-icex-agenda
 DESCRIPTION:Teresa Guillen Zulueta\n\nAgenda: https://diegorodsab-alt.gith
  ub.io/mba-icex-agenda/
@@ -102,7 +102,7 @@ BEGIN:VEVENT
 SUMMARY:Habilidades directivas · S2
 DTSTART:20261007T111500Z
 DTEND:20261007T124500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:4e36d8859094936095f4@mba-icex-agenda
 DESCRIPTION:Odhrán Mcintaggart\n\nAgenda: https://diegorodsab-alt.github.
  io/mba-icex-agenda/
@@ -112,7 +112,7 @@ BEGIN:VEVENT
 SUMMARY:Marketing · S2
 DTSTART:20261008T073000Z
 DTEND:20261008T090000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:b10d0d94405deabde846@mba-icex-agenda
 DESCRIPTION:Isabel María Muñoz Torrente\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -122,7 +122,7 @@ BEGIN:VEVENT
 SUMMARY:Economía · S2
 DTSTART:20261008T091500Z
 DTEND:20261008T104500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:2dd8423be5628169cc9a@mba-icex-agenda
 DESCRIPTION:Jose Andres Fernandez Cornejo\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -132,7 +132,7 @@ BEGIN:VEVENT
 SUMMARY:Taller de escritura · S1
 DTSTART:20261008T111500Z
 DTEND:20261008T124500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:9143a6a03e47fa7b3915@mba-icex-agenda
 DESCRIPTION:Juan José Arevalillo Doval\n\nAgenda: https://diegorodsab-alt
  .github.io/mba-icex-agenda/
@@ -143,7 +143,7 @@ SUMMARY:Sesión online formativa sobre las funcionalidades de las licencia
  s Microsoft de estudiante.
 DTSTART:20261009T113000Z
 DTEND:20261009T123000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:5968db34ee5b15c795d3@mba-icex-agenda
 DESCRIPTION:\n\nAgenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 LOCATION:On Line
@@ -152,7 +152,7 @@ BEGIN:VEVENT
 SUMMARY:Dirección estratégica · S2
 DTSTART:20261013T073000Z
 DTEND:20261013T090000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:8dafa4730d12ae4416a7@mba-icex-agenda
 DESCRIPTION:Lecturas obligatorias siguiendo el Silabo.\nJavier Ruiz De Oje
  da Zurita\n\nAgenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -162,7 +162,7 @@ BEGIN:VEVENT
 SUMMARY:Investigación Comercial II · S2
 DTSTART:20261013T091500Z
 DTEND:20261013T104500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:99682d4011dd02897952@mba-icex-agenda
 DESCRIPTION:Sandra Tobalina Saiz\n\nAgenda: https://diegorodsab-alt.github
  .io/mba-icex-agenda/
@@ -172,7 +172,7 @@ BEGIN:VEVENT
 SUMMARY:Economía · S3
 DTSTART:20261013T111500Z
 DTEND:20261013T124500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:6c169ff1f55fb3eb7798@mba-icex-agenda
 DESCRIPTION:Jose Andres Fernandez Cornejo\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -182,7 +182,7 @@ BEGIN:VEVENT
 SUMMARY:Sector exterior y UE · S1
 DTSTART:20261014T073000Z
 DTEND:20261014T090000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:4789bc1df6c4c1a9bfdc@mba-icex-agenda
 DESCRIPTION:Jose Andres Fernandez Cornejo\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -192,7 +192,7 @@ BEGIN:VEVENT
 SUMMARY:Investigación Comercial I · S2
 DTSTART:20261014T091500Z
 DTEND:20261014T104500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:e8f8a7f726451f488c36@mba-icex-agenda
 DESCRIPTION:Teresa Guillen Zulueta\n\nAgenda: https://diegorodsab-alt.gith
  ub.io/mba-icex-agenda/
@@ -202,7 +202,7 @@ BEGIN:VEVENT
 SUMMARY:Habilidades directivas · S3
 DTSTART:20261014T111500Z
 DTEND:20261014T124500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:5a7fbad4824e51113790@mba-icex-agenda
 DESCRIPTION:Odhrán Mcintaggart\n\nAgenda: https://diegorodsab-alt.github.
  io/mba-icex-agenda/
@@ -212,7 +212,7 @@ BEGIN:VEVENT
 SUMMARY:Contabilidad y finanzas · S2
 DTSTART:20261015T073000Z
 DTEND:20261015T090000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:95c0bfd697766ef93be8@mba-icex-agenda
 DESCRIPTION:Se recomienda que los alumnos acudan a cada sesión habiendo l
  eído la nota técnica y/o preparado el caso que se menciona en el Silabo
@@ -224,7 +224,7 @@ BEGIN:VEVENT
 SUMMARY:Sector exterior y UE · S2
 DTSTART:20261015T091500Z
 DTEND:20261015T104500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:abd1a6b77a627bd84485@mba-icex-agenda
 DESCRIPTION:Jose Andres Fernandez Cornejo\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -234,7 +234,7 @@ BEGIN:VEVENT
 SUMMARY:Taller de escritura · S2
 DTSTART:20261015T111500Z
 DTEND:20261015T124500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:ed7ad3c6739df15d1c98@mba-icex-agenda
 DESCRIPTION:Juan José Arevalillo Doval\n\nAgenda: https://diegorodsab-alt
  .github.io/mba-icex-agenda/
@@ -244,7 +244,7 @@ BEGIN:VEVENT
 SUMMARY:Habilidades directivas · S4
 DTSTART:20261019T073000Z
 DTEND:20261019T090000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:c4d4f1235e5224e2d3cb@mba-icex-agenda
 DESCRIPTION:Hayley Dormand\n\nAgenda: https://diegorodsab-alt.github.io/mb
  a-icex-agenda/
@@ -254,7 +254,7 @@ BEGIN:VEVENT
 SUMMARY:Marketing · S3
 DTSTART:20261019T091500Z
 DTEND:20261019T104500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:cc53fedf7a59412aa7c7@mba-icex-agenda
 DESCRIPTION:Isabel María Muñoz Torrente\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -264,7 +264,7 @@ BEGIN:VEVENT
 SUMMARY:Contabilidad y finanzas · S3
 DTSTART:20261019T111500Z
 DTEND:20261019T124500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:6e8275f1cbb91aea2f24@mba-icex-agenda
 DESCRIPTION:Se recomienda que los alumnos acudan a cada sesión habiendo l
  eído la nota técnica y/o preparado el caso que se menciona en el Silabo
@@ -276,7 +276,7 @@ BEGIN:VEVENT
 SUMMARY:Economía · S4
 DTSTART:20261020T073000Z
 DTEND:20261020T090000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:98c336ccd57da3a71a77@mba-icex-agenda
 DESCRIPTION:Jose Andres Fernandez Cornejo\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -286,7 +286,7 @@ BEGIN:VEVENT
 SUMMARY:Investigación Comercial II · S3
 DTSTART:20261020T091500Z
 DTEND:20261020T104500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:06b8ab681028ba965d39@mba-icex-agenda
 DESCRIPTION:Sandra Tobalina Saiz\n\nAgenda: https://diegorodsab-alt.github
  .io/mba-icex-agenda/
@@ -296,7 +296,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Economía
 DTSTART:20261021T070000Z
 DTEND:20261021T130000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:266b89153529ffbd3995@mba-icex-agenda
 DESCRIPTION:EXAMEN PARCIAL DE FUNDAMENTOS DE ECONOMÍA.\n\nAgenda: https:/
  /diegorodsab-alt.github.io/mba-icex-agenda/
@@ -315,7 +315,7 @@ BEGIN:VEVENT
 SUMMARY:Habilidades directivas · S5
 DTSTART:20261021T140000Z
 DTEND:20261021T153000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:ca35514a5dcba27c8eed@mba-icex-agenda
 DESCRIPTION:Odhrán Mcintaggart\n\nAgenda: https://diegorodsab-alt.github.
  io/mba-icex-agenda/
@@ -325,7 +325,7 @@ BEGIN:VEVENT
 SUMMARY:Estrategia avanzada · S1
 DTSTART:20261022T073000Z
 DTEND:20261022T090000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:7f37ee0c88387c481c2a@mba-icex-agenda
 DESCRIPTION:Caso de Estrategia: NH HOTELES - (La lectura de este caso es o
  bligatoria antes de la clase)\nGustavo Emilio Mata Fernandez-Balbuena\n\nA
@@ -336,7 +336,7 @@ BEGIN:VEVENT
 SUMMARY:Sector exterior y UE · S3
 DTSTART:20261022T091500Z
 DTEND:20261022T104500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:459f24f496020d63e96f@mba-icex-agenda
 DESCRIPTION:Jose Andres Fernandez Cornejo\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -346,7 +346,7 @@ BEGIN:VEVENT
 SUMMARY:Taller de escritura · S3
 DTSTART:20261022T111500Z
 DTEND:20261022T124500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:68728fe7d486ae458a57@mba-icex-agenda
 DESCRIPTION:Juan José Arevalillo Doval\n\nAgenda: https://diegorodsab-alt
  .github.io/mba-icex-agenda/
@@ -356,7 +356,7 @@ BEGIN:VEVENT
 SUMMARY:Contabilidad y finanzas · S4
 DTSTART:20261022T140000Z
 DTEND:20261022T153000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:cba6a6a51d09a961b6d7@mba-icex-agenda
 DESCRIPTION:Se recomienda que los alumnos acudan a cada sesión habiendo l
  eído la nota técnica y/o preparado el caso que se menciona en el Silabo
@@ -368,7 +368,7 @@ BEGIN:VEVENT
 SUMMARY:Habilidades directivas · S6
 DTSTART:20261026T083000Z
 DTEND:20261026T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:ee71dbfe3060a006d9d2@mba-icex-agenda
 DESCRIPTION:Hayley Dormand\n\nAgenda: https://diegorodsab-alt.github.io/mb
  a-icex-agenda/
@@ -378,7 +378,7 @@ BEGIN:VEVENT
 SUMMARY:Marketing · S4
 DTSTART:20261026T101500Z
 DTEND:20261026T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:c6663372f7ffda86a6de@mba-icex-agenda
 DESCRIPTION:Isabel María Muñoz Torrente\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -388,7 +388,7 @@ BEGIN:VEVENT
 SUMMARY:Contabilidad y finanzas · S5
 DTSTART:20261026T121500Z
 DTEND:20261026T134500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:1a112a0d6d5b33375e54@mba-icex-agenda
 DESCRIPTION:Se recomienda que los alumnos acudan a cada sesión habiendo l
  eído la nota técnica y/o preparado el caso que se menciona en el Silabo
@@ -400,7 +400,7 @@ BEGIN:VEVENT
 SUMMARY:Dirección estratégica · S3
 DTSTART:20261027T083000Z
 DTEND:20261027T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:6abf5bf986381abca1cd@mba-icex-agenda
 DESCRIPTION:Lecturas obligatorias siguiendo el Silabo.\nJavier Ruiz De Oje
  da Zurita\n\nAgenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -410,7 +410,7 @@ BEGIN:VEVENT
 SUMMARY:Investigación Comercial II · S4
 DTSTART:20261027T101500Z
 DTEND:20261027T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:beac4471716ecb31953b@mba-icex-agenda
 DESCRIPTION:Sandra Tobalina Saiz\n\nAgenda: https://diegorodsab-alt.github
  .io/mba-icex-agenda/
@@ -420,7 +420,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Contabilidad y finanzas
 DTSTART:20261028T080000Z
 DTEND:20261028T140000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:e6768c4a58e7597e407d@mba-icex-agenda
 DESCRIPTION:EXAMEN PARCIAL DE FUNDAMENTOS DE CONTABILIDAD Y FINANZAS.\n\nA
  genda: https://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -439,7 +439,7 @@ BEGIN:VEVENT
 SUMMARY:Economía · S5
 DTSTART:20261029T083000Z
 DTEND:20261029T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:013bf5e22b0f1fa1ec5b@mba-icex-agenda
 DESCRIPTION:Jose Andres Fernandez Cornejo\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -449,7 +449,7 @@ BEGIN:VEVENT
 SUMMARY:Sector exterior y UE · S4
 DTSTART:20261029T101500Z
 DTEND:20261029T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:a62cb2a2e3b4b18cff6c@mba-icex-agenda
 DESCRIPTION:Jose Andres Fernandez Cornejo\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -459,7 +459,7 @@ BEGIN:VEVENT
 SUMMARY:Contabilidad y finanzas · S6
 DTSTART:20261029T121500Z
 DTEND:20261029T134500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:acf178b29526212e0e2e@mba-icex-agenda
 DESCRIPTION:Se recomienda que los alumnos acudan a cada sesión habiendo l
  eído la nota técnica y/o preparado el caso que se menciona en el Silabo
@@ -471,7 +471,7 @@ BEGIN:VEVENT
 SUMMARY:Dirección estratégica · S4
 DTSTART:20261103T083000Z
 DTEND:20261103T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:0488acbc8e28204fe607@mba-icex-agenda
 DESCRIPTION:Lecturas obligatorias siguiendo el Silabo.\nJavier Ruiz De Oje
  da Zurita\n\nAgenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -481,7 +481,7 @@ BEGIN:VEVENT
 SUMMARY:Investigación Comercial II · S5
 DTSTART:20261103T101500Z
 DTEND:20261103T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:a5c9e935835861ec4e97@mba-icex-agenda
 DESCRIPTION:Sandra Tobalina Saiz\n\nAgenda: https://diegorodsab-alt.github
  .io/mba-icex-agenda/
@@ -491,7 +491,7 @@ BEGIN:VEVENT
 SUMMARY:Economía · S6
 DTSTART:20261104T083000Z
 DTEND:20261104T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:95266b0c759692f98e25@mba-icex-agenda
 DESCRIPTION:Jose Andres Fernandez Cornejo\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -501,7 +501,7 @@ BEGIN:VEVENT
 SUMMARY:Investigación Comercial I · S3
 DTSTART:20261104T101500Z
 DTEND:20261104T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:43d0b27186c1772d0e2b@mba-icex-agenda
 DESCRIPTION:Teresa Guillen Zulueta\n\nAgenda: https://diegorodsab-alt.gith
  ub.io/mba-icex-agenda/
@@ -511,7 +511,7 @@ BEGIN:VEVENT
 SUMMARY:Habilidades directivas · S7
 DTSTART:20261104T121500Z
 DTEND:20261104T134500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:16ebd457399bf0bd3226@mba-icex-agenda
 DESCRIPTION:Odhrán Mcintaggart\n\nAgenda: https://diegorodsab-alt.github.
  io/mba-icex-agenda/
@@ -521,7 +521,7 @@ BEGIN:VEVENT
 SUMMARY:Sector exterior y UE · S5
 DTSTART:20261105T083000Z
 DTEND:20261105T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:9107c4ed5004e95c2078@mba-icex-agenda
 DESCRIPTION:Jose Andres Fernandez Cornejo\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -531,7 +531,7 @@ BEGIN:VEVENT
 SUMMARY:Economía · S7
 DTSTART:20261105T101500Z
 DTEND:20261105T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:528789422edde65083aa@mba-icex-agenda
 DESCRIPTION:Jose Andres Fernandez Cornejo\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -541,7 +541,7 @@ BEGIN:VEVENT
 SUMMARY:Taller de escritura · S4
 DTSTART:20261105T121500Z
 DTEND:20261105T134500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:04e52926fafed339c20c@mba-icex-agenda
 DESCRIPTION:Juan José Arevalillo Doval\n\nAgenda: https://diegorodsab-alt
  .github.io/mba-icex-agenda/
@@ -551,7 +551,7 @@ BEGIN:VEVENT
 SUMMARY:Dirección estratégica · S5
 DTSTART:20261110T083000Z
 DTEND:20261110T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:4a799ab0f722f5ed45ae@mba-icex-agenda
 DESCRIPTION:Lecturas obligatorias siguiendo el Silabo.\nJavier Ruiz De Oje
  da Zurita\n\nAgenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -561,7 +561,7 @@ BEGIN:VEVENT
 SUMMARY:Comportamiento social · S1
 DTSTART:20261110T101500Z
 DTEND:20261110T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:fcd5ee39977e10610d19@mba-icex-agenda
 DESCRIPTION:María Milagros De Torres Fernández\n\nAgenda: https://diegor
  odsab-alt.github.io/mba-icex-agenda/
@@ -571,7 +571,7 @@ BEGIN:VEVENT
 SUMMARY:Sector exterior y UE · S6
 DTSTART:20261111T083000Z
 DTEND:20261111T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:72e70432e79058b4ae59@mba-icex-agenda
 DESCRIPTION:Cristina Serrano Leal\n\nAgenda: https://diegorodsab-alt.githu
  b.io/mba-icex-agenda/
@@ -581,7 +581,7 @@ BEGIN:VEVENT
 SUMMARY:Sector exterior y UE · S7
 DTSTART:20261111T101500Z
 DTEND:20261111T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:33507e62f2bc7e72e9ee@mba-icex-agenda
 DESCRIPTION:Cristina Serrano Leal\n\nAgenda: https://diegorodsab-alt.githu
  b.io/mba-icex-agenda/
@@ -591,7 +591,7 @@ BEGIN:VEVENT
 SUMMARY:Contabilidad y finanzas · S7
 DTSTART:20261111T121500Z
 DTEND:20261111T134500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:f26dd603008afa908895@mba-icex-agenda
 DESCRIPTION:Se recomienda que los alumnos acudan a cada sesión habiendo l
  eído la nota técnica y/o preparado el caso que se menciona en el Silabo
@@ -603,7 +603,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Investigación Comercial I
 DTSTART:20261112T080000Z
 DTEND:20261112T140000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:e884e3766b926309721a@mba-icex-agenda
 DESCRIPTION:EXÁMEN FINAL PRÁCTICO - Investigación Comercial I - Fuentes
   de información económica y comercial / Market research I - Economic and
@@ -624,7 +624,7 @@ BEGIN:VEVENT
 SUMMARY:Contabilidad y finanzas · S8
 DTSTART:20261113T083000Z
 DTEND:20261113T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:13492a39e632d9d9420d@mba-icex-agenda
 DESCRIPTION:Se recomienda que los alumnos acudan a cada sesión habiendo l
  eído la nota técnica y/o preparado el caso que se menciona en el Silabo
@@ -636,7 +636,7 @@ BEGIN:VEVENT
 SUMMARY:Dirección estratégica · S6
 DTSTART:20261113T101500Z
 DTEND:20261113T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:2967fcffc38fe6afb77c@mba-icex-agenda
 DESCRIPTION:Lecturas obligatorias siguiendo el Silabo.\nJavier Ruiz De Oje
  da Zurita\n\nAgenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -646,7 +646,7 @@ BEGIN:VEVENT
 SUMMARY:Habilidades directivas · S8
 DTSTART:20261116T083000Z
 DTEND:20261116T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:dcc8bd85170eef4aebed@mba-icex-agenda
 DESCRIPTION:Hayley Dormand\n\nAgenda: https://diegorodsab-alt.github.io/mb
  a-icex-agenda/
@@ -656,7 +656,7 @@ BEGIN:VEVENT
 SUMMARY:Marketing · S5
 DTSTART:20261116T101500Z
 DTEND:20261116T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:871e5616c6ca1b364f25@mba-icex-agenda
 DESCRIPTION:Isabel María Muñoz Torrente\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -666,7 +666,7 @@ BEGIN:VEVENT
 SUMMARY:Contabilidad y finanzas · S9
 DTSTART:20261116T121500Z
 DTEND:20261116T134500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:a4b9920bfe77e5d5ef2f@mba-icex-agenda
 DESCRIPTION:Se recomienda que los alumnos acudan a cada sesión habiendo l
  eído la nota técnica y/o preparado el caso que se menciona en el Silabo
@@ -678,7 +678,7 @@ BEGIN:VEVENT
 SUMMARY:Dirección estratégica · S7
 DTSTART:20261117T083000Z
 DTEND:20261117T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:0bcf202fc5242d587cd3@mba-icex-agenda
 DESCRIPTION:Lecturas obligatorias siguiendo el Silabo.\nJavier Ruiz De Oje
  da Zurita\n\nAgenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -688,7 +688,7 @@ BEGIN:VEVENT
 SUMMARY:Investigación Comercial II · S6
 DTSTART:20261117T101500Z
 DTEND:20261117T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:52c741f21f1d0f4316aa@mba-icex-agenda
 DESCRIPTION:Sandra Tobalina Saiz\n\nAgenda: https://diegorodsab-alt.github
  .io/mba-icex-agenda/
@@ -698,7 +698,7 @@ BEGIN:VEVENT
 SUMMARY:Estrategia avanzada · S2
 DTSTART:20261117T121500Z
 DTEND:20261117T134500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:90d0c8b093e93d9bb3d4@mba-icex-agenda
 DESCRIPTION:Caso de Estrategia: ACERINOX - (La lectura de este caso es obl
  igatoria antes de la clase)\nGustavo Emilio Mata Fernandez-Balbuena\n\nAge
@@ -709,7 +709,7 @@ BEGIN:VEVENT
 SUMMARY:Habilidades directivas · S9
 DTSTART:20261118T101500Z
 DTEND:20261118T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:7f558036947748ee2373@mba-icex-agenda
 DESCRIPTION:Odhrán Mcintaggart\n\nAgenda: https://diegorodsab-alt.github.
  io/mba-icex-agenda/
@@ -719,7 +719,7 @@ BEGIN:VEVENT
 SUMMARY:Economía · S8
 DTSTART:20261119T101500Z
 DTEND:20261119T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:8c31db3d5284c734c142@mba-icex-agenda
 DESCRIPTION:Jose Andres Fernandez Cornejo\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -729,7 +729,7 @@ BEGIN:VEVENT
 SUMMARY:Taller de escritura · S5
 DTSTART:20261119T121500Z
 DTEND:20261119T134500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:762ebef1204596ed4475@mba-icex-agenda
 DESCRIPTION:Juan José Arevalillo Doval\n\nAgenda: https://diegorodsab-alt
  .github.io/mba-icex-agenda/
@@ -739,7 +739,7 @@ BEGIN:VEVENT
 SUMMARY:Habilidades directivas · S10
 DTSTART:20261123T083000Z
 DTEND:20261123T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:29a3ce0617101e5844d9@mba-icex-agenda
 DESCRIPTION:Hayley Dormand\n\nAgenda: https://diegorodsab-alt.github.io/mb
  a-icex-agenda/
@@ -749,7 +749,7 @@ BEGIN:VEVENT
 SUMMARY:Marketing · S6
 DTSTART:20261123T101500Z
 DTEND:20261123T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:7f4ec57ae0dedc389d52@mba-icex-agenda
 DESCRIPTION:Isabel María Muñoz Torrente\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -759,7 +759,7 @@ BEGIN:VEVENT
 SUMMARY:Dirección estratégica · S8
 DTSTART:20261124T083000Z
 DTEND:20261124T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:0c50990f5eddd6fe133d@mba-icex-agenda
 DESCRIPTION:Lecturas obligatorias siguiendo el Silabo.\nMaria Cristina Her
  nández Holgado\n\nAgenda: https://diegorodsab-alt.github.io/mba-icex-agen
@@ -770,7 +770,7 @@ BEGIN:VEVENT
 SUMMARY:Comportamiento social · S2
 DTSTART:20261124T101500Z
 DTEND:20261124T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:0afc64dcaa72c8f27164@mba-icex-agenda
 DESCRIPTION:María Milagros De Torres Fernández\n\nAgenda: https://diegor
  odsab-alt.github.io/mba-icex-agenda/
@@ -780,7 +780,7 @@ BEGIN:VEVENT
 SUMMARY:Sector exterior y UE · S8
 DTSTART:20261124T121500Z
 DTEND:20261124T134500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:752fea1363a3aeaf29bb@mba-icex-agenda
 DESCRIPTION:Cristina Serrano Leal\n\nAgenda: https://diegorodsab-alt.githu
  b.io/mba-icex-agenda/
@@ -790,7 +790,7 @@ BEGIN:VEVENT
 SUMMARY:Economía · S9
 DTSTART:20261125T083000Z
 DTEND:20261125T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:a435c7bfc714d79c4424@mba-icex-agenda
 DESCRIPTION:Jose Andres Fernandez Cornejo\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -800,7 +800,7 @@ BEGIN:VEVENT
 SUMMARY:Marketing · S7
 DTSTART:20261125T101500Z
 DTEND:20261125T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:90fe0fb5707e709b79c8@mba-icex-agenda
 DESCRIPTION:Isabel María Muñoz Torrente\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -810,7 +810,7 @@ BEGIN:VEVENT
 SUMMARY:Habilidades directivas · S11
 DTSTART:20261125T121500Z
 DTEND:20261125T134500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:92fcbbecfdd1417f4f6c@mba-icex-agenda
 DESCRIPTION:Odhrán Mcintaggart\n\nAgenda: https://diegorodsab-alt.github.
  io/mba-icex-agenda/
@@ -820,7 +820,7 @@ BEGIN:VEVENT
 SUMMARY:Contabilidad y finanzas · S10
 DTSTART:20261126T083000Z
 DTEND:20261126T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:e95366041054b8e6d54f@mba-icex-agenda
 DESCRIPTION:Se recomienda que los alumnos acudan a cada sesión habiendo l
  eído la nota técnica y/o preparado el caso que se menciona en el Silabo
@@ -832,7 +832,7 @@ BEGIN:VEVENT
 SUMMARY:Economía · S10
 DTSTART:20261126T101500Z
 DTEND:20261126T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:76784da184c6dc538cae@mba-icex-agenda
 DESCRIPTION:Jose Andres Fernandez Cornejo\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -842,7 +842,7 @@ BEGIN:VEVENT
 SUMMARY:Taller de escritura · S6
 DTSTART:20261126T121500Z
 DTEND:20261126T134500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:3fb4f1f036bc65d78e00@mba-icex-agenda
 DESCRIPTION:Juan José Arevalillo Doval\n\nAgenda: https://diegorodsab-alt
  .github.io/mba-icex-agenda/
@@ -852,7 +852,7 @@ BEGIN:VEVENT
 SUMMARY:Habilidades directivas · S12
 DTSTART:20261130T083000Z
 DTEND:20261130T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:0902e53d2deacce4131e@mba-icex-agenda
 DESCRIPTION:Hayley Dormand\n\nAgenda: https://diegorodsab-alt.github.io/mb
  a-icex-agenda/
@@ -862,7 +862,7 @@ BEGIN:VEVENT
 SUMMARY:Marketing · S8
 DTSTART:20261130T101500Z
 DTEND:20261130T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:8c851fbd220f005919d8@mba-icex-agenda
 DESCRIPTION:Isabel María Muñoz Torrente\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -872,7 +872,7 @@ BEGIN:VEVENT
 SUMMARY:Contabilidad y finanzas · S11
 DTSTART:20261130T121500Z
 DTEND:20261130T134500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:911bfad189a13126c74c@mba-icex-agenda
 DESCRIPTION:Se recomienda que los alumnos acudan a cada sesión habiendo l
  eído la nota técnica y/o preparado el caso que se menciona en el Silabo
@@ -884,7 +884,7 @@ BEGIN:VEVENT
 SUMMARY:Investigación Comercial II · presentaciones
 DTSTART:20261201T083000Z
 DTEND:20261201T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:e65c6bc26f641dcf140b@mba-icex-agenda
 DESCRIPTION:Presentaciones de Trabajos.\nSandra Tobalina Saiz\n\nAgenda: h
  ttps://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -894,7 +894,7 @@ BEGIN:VEVENT
 SUMMARY:Investigación Comercial II · presentaciones
 DTSTART:20261201T101500Z
 DTEND:20261201T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:69c4fe2ce0357d41dd3f@mba-icex-agenda
 DESCRIPTION:Presentaciones de Trabajos.\nSandra Tobalina Saiz\n\nAgenda: h
  ttps://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -904,7 +904,7 @@ BEGIN:VEVENT
 SUMMARY:Sector exterior y UE · S9
 DTSTART:20261201T121500Z
 DTEND:20261201T134500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:27866fafa2c6d88387b6@mba-icex-agenda
 DESCRIPTION:Santiago M Pantín  Lage\n\nAgenda: https://diegorodsab-alt.gi
  thub.io/mba-icex-agenda/
@@ -914,7 +914,7 @@ BEGIN:VEVENT
 SUMMARY:Dirección estratégica · S9
 DTSTART:20261202T083000Z
 DTEND:20261202T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:df73b90dc3f4a981ee64@mba-icex-agenda
 DESCRIPTION:Lecturas obligatorias siguiendo el Silabo.\nJavier Ruiz De Oje
  da Zurita\n\nAgenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -924,7 +924,7 @@ BEGIN:VEVENT
 SUMMARY:Marketing · S9
 DTSTART:20261202T101500Z
 DTEND:20261202T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:79624871f3ae651a3829@mba-icex-agenda
 DESCRIPTION:Isabel María Muñoz Torrente\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -934,7 +934,7 @@ BEGIN:VEVENT
 SUMMARY:Habilidades directivas · S13
 DTSTART:20261202T121500Z
 DTEND:20261202T134500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:8e4a4d11f7b8ea75dbd5@mba-icex-agenda
 DESCRIPTION:Odhrán Mcintaggart\n\nAgenda: https://diegorodsab-alt.github.
  io/mba-icex-agenda/
@@ -944,7 +944,7 @@ BEGIN:VEVENT
 SUMMARY:Taller de escritura · S7
 DTSTART:20261203T083000Z
 DTEND:20261203T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:9ab5bab11198f5e16723@mba-icex-agenda
 DESCRIPTION:Juan José Arevalillo Doval\n\nAgenda: https://diegorodsab-alt
  .github.io/mba-icex-agenda/
@@ -954,7 +954,7 @@ BEGIN:VEVENT
 SUMMARY:Economía · S11
 DTSTART:20261203T101500Z
 DTEND:20261203T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:0390c3b8263e03462143@mba-icex-agenda
 DESCRIPTION:Jose Andres Fernandez Cornejo\n\nAgenda: https://diegorodsab-a
  lt.github.io/mba-icex-agenda/
@@ -964,7 +964,7 @@ BEGIN:VEVENT
 SUMMARY:Comportamiento social · S3
 DTSTART:20261203T121500Z
 DTEND:20261203T134500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:44f7f3576173159217cb@mba-icex-agenda
 DESCRIPTION:María Milagros De Torres Fernández\n\nAgenda: https://diegor
  odsab-alt.github.io/mba-icex-agenda/
@@ -974,7 +974,7 @@ BEGIN:VEVENT
 SUMMARY:Marketing · presentaciones
 DTSTART:20261209T083000Z
 DTEND:20261209T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:294f72bc77a9a2d9a5da@mba-icex-agenda
 DESCRIPTION:Presentaciones de Trabajos.\nIsabel María Muñoz Torrente\n\n
  Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -984,7 +984,7 @@ BEGIN:VEVENT
 SUMMARY:Marketing · presentaciones
 DTSTART:20261209T101500Z
 DTEND:20261209T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:2db1bcaa8e1e87ced543@mba-icex-agenda
 DESCRIPTION:Presentaciones de Trabajos.\nIsabel María Muñoz Torrente\n\n
  Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -994,7 +994,7 @@ BEGIN:VEVENT
 SUMMARY:Habilidades directivas · S14
 DTSTART:20261209T121500Z
 DTEND:20261209T134500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:c440c965b3203db22f4a@mba-icex-agenda
 DESCRIPTION:Odhrán Mcintaggart\n\nAgenda: https://diegorodsab-alt.github.
  io/mba-icex-agenda/
@@ -1004,7 +1004,7 @@ BEGIN:VEVENT
 SUMMARY:Dirección estratégica · presentaciones
 DTSTART:20261210T083000Z
 DTEND:20261210T100000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:59a59c93c2747c7ebdf1@mba-icex-agenda
 DESCRIPTION:Presentaciones de Trabajos.\nJavier Ruiz De Ojeda Zurita\n\nAg
  enda: https://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -1014,7 +1014,7 @@ BEGIN:VEVENT
 SUMMARY:Dirección estratégica · presentaciones
 DTSTART:20261210T101500Z
 DTEND:20261210T114500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:e4e7f8a2b7db01080531@mba-icex-agenda
 DESCRIPTION:Presentaciones de Trabajos.\nJavier Ruiz De Ojeda Zurita\n\nAg
  enda: https://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -1024,7 +1024,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Investigación Comercial II
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261212
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:1abc9dae12d88d1afc76@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1043,7 +1043,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Economía
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:6061976e6c33ef657aea@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1062,7 +1062,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Sector exterior y UE
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:e9c8f9f237b27d59870a@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1081,7 +1081,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Dirección estratégica
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:d3c695330d4881f2cea1@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1100,7 +1100,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Marketing
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:a681270619928b43f311@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1119,7 +1119,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Comportamiento social
 DTSTART;VALUE=DATE:20261218
 DTEND;VALUE=DATE:20261219
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:3f0775e8c9bbbc84f20e@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1138,7 +1138,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Habilidades directivas
 DTSTART;VALUE=DATE:20261218
 DTEND;VALUE=DATE:20261219
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:c0113fe1c60f6d025b38@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1157,7 +1157,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Contabilidad y finanzas
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20261222
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:4e6ff45813c9cd55913f@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1176,7 +1176,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Financiación medio y largo
 DTSTART;VALUE=DATE:20270218
 DTEND;VALUE=DATE:20270219
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:fdfc5970cb40437f4c73@mba-icex-agenda
 DESCRIPTION:Examen parcial\n\nAgenda: https://diegorodsab-alt.github.io/mb
  a-icex-agenda/
@@ -1195,7 +1195,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Finanzas a corto plazo
 DTSTART;VALUE=DATE:20270225
 DTEND;VALUE=DATE:20270226
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:bcc2bc8cd606a773759a@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1214,7 +1214,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Fiscalidad internacional
 DTSTART;VALUE=DATE:20270308
 DTEND;VALUE=DATE:20270309
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:a9a7f1b377398c7b9b4b@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1233,7 +1233,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Business analytics e IA
 DTSTART;VALUE=DATE:20270309
 DTEND;VALUE=DATE:20270310
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:02ebdc0098e850dd0029@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1252,7 +1252,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Entorno jurídico
 DTSTART;VALUE=DATE:20270310
 DTEND;VALUE=DATE:20270311
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:9aaf9615ef4453d7cc3d@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1271,7 +1271,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Marketing internacional
 DTSTART;VALUE=DATE:20270311
 DTEND;VALUE=DATE:20270312
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:822f2441b3e3e93a1541@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1290,7 +1290,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Transporte y logística
 DTSTART;VALUE=DATE:20270315
 DTEND;VALUE=DATE:20270316
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:0dc56bfb0422fd142214@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1309,7 +1309,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Financiación medio y largo
 DTSTART;VALUE=DATE:20270316
 DTEND;VALUE=DATE:20270317
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:e8fb141c6b8bffa8afac@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1328,7 +1328,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · e-Business
 DTSTART;VALUE=DATE:20270317
 DTEND;VALUE=DATE:20270318
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:8c2f1069f1d72723d66b@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1347,7 +1347,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Taller de escritura
 DTSTART;VALUE=DATE:20270504
 DTEND;VALUE=DATE:20270505
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:9837b6d5459c70805e2e@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1366,7 +1366,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Estrategia avanzada
 DTSTART;VALUE=DATE:20270601
 DTEND;VALUE=DATE:20270602
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:63c6a36602f6c1447501@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1385,7 +1385,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Emprendimiento
 DTSTART;VALUE=DATE:20270602
 DTEND;VALUE=DATE:20270603
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:f5d202f58e3190d676cd@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1404,7 +1404,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Instrumentos de apoyo
 DTSTART;VALUE=DATE:20270603
 DTEND;VALUE=DATE:20270604
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:7bdda9f5643ae9707638@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1423,7 +1423,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Técnicas de ventas
 DTSTART;VALUE=DATE:20270608
 DTEND;VALUE=DATE:20270609
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:96fc68e018361b94c012@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1442,7 +1442,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Project Finance
 DTSTART;VALUE=DATE:20270609
 DTEND;VALUE=DATE:20270610
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:3e838944a8d93f9a6846@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1461,7 +1461,7 @@ BEGIN:VEVENT
 SUMMARY:EXAMEN · Análisis de países
 DTSTART;VALUE=DATE:20270610
 DTEND;VALUE=DATE:20270611
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:1980b753ea624d772677@mba-icex-agenda
 DESCRIPTION:Examen final\n\nAgenda: https://diegorodsab-alt.github.io/mba-
  icex-agenda/
@@ -1480,7 +1480,7 @@ BEGIN:VEVENT
 SUMMARY:📝 General · Test guía del alumnado – Grupo A\, B\, C y D
 DTSTART:20261002T213000Z
 DTEND:20261002T220000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:efae4473981acbb3b9c2@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-10-03 00:00\nMoodle: https://lms.icex.es/mod/quiz/
  view.php?id=53368\n\nAgenda: https://diegorodsab-alt.github.io/mba-icex-ag
@@ -1509,7 +1509,7 @@ SUMMARY:📤 Investigación Comercial I · Actividades 1 y 2 del módulo o
  nline
 DTSTART:20261009T170000Z
 DTEND:20261009T173000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:ac3988a4602c0ce1adc4@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-10-09 19:30\nPeso: 4%\n\nAgenda: https://diegorods
  ab-alt.github.io/mba-icex-agenda/
@@ -1537,7 +1537,7 @@ SUMMARY:📤 Habilidades directivas · Interest/Position Map\, taller BATN
  A y role play ronda 1
 DTSTART:20261014T104500Z
 DTEND:20261014T111500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:520ff728a500291259b5@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-10-14 13:15\n\nAgenda: https://diegorodsab-alt.git
  hub.io/mba-icex-agenda/
@@ -1565,7 +1565,7 @@ SUMMARY:📤 Contabilidad y finanzas · Ejercicios de contabilidad de la s
  esión 2 (en clase)
 DTSTART:20261015T070000Z
 DTEND:20261015T073000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:d0ce4623149003e34aa4@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-10-15 09:30\nVoluntaria\n\nAgenda: https://diegoro
  dsab-alt.github.io/mba-icex-agenda/
@@ -1575,7 +1575,7 @@ SUMMARY:📤 Investigación Comercial I · Actividades 3 y 4 del módulo o
  nline
 DTSTART:20261016T170000Z
 DTEND:20261016T173000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:b841200c71aa44246a60@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-10-16 19:30\nPeso: 4%\n\nAgenda: https://diegorods
  ab-alt.github.io/mba-icex-agenda/
@@ -1603,7 +1603,7 @@ SUMMARY:📤 Investigación Comercial I · Actividades 5 y 6 del módulo o
  nline
 DTSTART:20261023T170000Z
 DTEND:20261023T173000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:2e4285621970224ccfcf@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-10-23 19:30\nPeso: 4%\n\nAgenda: https://diegorods
  ab-alt.github.io/mba-icex-agenda/
@@ -1631,7 +1631,7 @@ SUMMARY:📝 Contabilidad y finanzas · Test de autoevaluación (capítulo
  s 1\, 2\, 3\, 4\, 9 y 10)
 DTSTART:20261026T073000Z
 DTEND:20261026T080000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:7fb82b9a49d4cf129748@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-10-26 09:00\nPeso: 15%\nMoodle: https://lms.icex.e
  s/mod/quiz/view.php?id=53415\n\nAgenda: https://diegorodsab-alt.github.io/
@@ -1659,7 +1659,7 @@ BEGIN:VEVENT
 SUMMARY:📤 Contabilidad y finanzas · Ejercicio Abedul
 DTSTART:20261026T073000Z
 DTEND:20261026T080000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:38bc0122652b1c0a9b38@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-10-26 09:00\nPeso: 10%\nMoodle: https://lms.icex.e
  s/mod/assign/view.php?id=53825\n\nAgenda: https://diegorodsab-alt.github.i
@@ -1684,7 +1684,7 @@ BEGIN:VEVENT
 SUMMARY:📤 Contabilidad y finanzas · Ejercicio Castaño
 DTSTART:20261026T073000Z
 DTEND:20261026T080000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:d9da9dd7063334cd0dca@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-10-26 09:00\nPeso: 10%\nMoodle: https://lms.icex.e
  s/mod/assign/view.php?id=53826\n\nAgenda: https://diegorodsab-alt.github.i
@@ -1709,7 +1709,7 @@ BEGIN:VEVENT
 SUMMARY:📤 Contabilidad y finanzas · Ejercicio Roble
 DTSTART:20261026T073000Z
 DTEND:20261026T080000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:ea04e8c2599791be763d@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-10-26 09:00\nPeso: 15%\nMoodle: https://lms.icex.e
  s/mod/assign/view.php?id=53827\n\nAgenda: https://diegorodsab-alt.github.i
@@ -1734,7 +1734,7 @@ BEGIN:VEVENT
 SUMMARY:📤 Contabilidad y finanzas · Ejercicio Eucalipto (existencias)
 DTSTART:20261026T073000Z
 DTEND:20261026T080000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:87f687a9d618b69a4353@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-10-26 09:00\nPeso: 15%\nMoodle: https://lms.icex.e
  s/mod/assign/view.php?id=53828\n\nAgenda: https://diegorodsab-alt.github.i
@@ -1762,7 +1762,7 @@ BEGIN:VEVENT
 SUMMARY:📤 Contabilidad y finanzas · Ejercicio Encina
 DTSTART:20261026T073000Z
 DTEND:20261026T080000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:9cf0fa82089afec3ccd1@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-10-26 09:00\nPeso: 25%\nMoodle: https://lms.icex.e
  s/mod/assign/view.php?id=53829\n\nAgenda: https://diegorodsab-alt.github.i
@@ -1788,7 +1788,7 @@ SUMMARY:📤 Contabilidad y finanzas · Ejercicio de cálculo financiero L
  aurel
 DTSTART:20261026T073000Z
 DTEND:20261026T080000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:cb0feffce3c382f00928@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-10-26 09:00\nPeso: 10%\nMoodle: https://lms.icex.e
  s/mod/assign/view.php?id=53830\n\nAgenda: https://diegorodsab-alt.github.i
@@ -1817,7 +1817,7 @@ SUMMARY:📤 Investigación Comercial I · Actividades 7 y 8 del módulo o
  nline
 DTSTART:20261030T180000Z
 DTEND:20261030T183000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:b47015048dddaf2bf7d6@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-10-30 19:30\nPeso: 4%\n\nAgenda: https://diegorods
  ab-alt.github.io/mba-icex-agenda/
@@ -1845,7 +1845,7 @@ SUMMARY:📤 Sector exterior y UE · Póster académico A1 sobre acuerdo O
  MC (entrega)
 DTSTART:20261103T090000Z
 DTEND:20261103T093000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:952110c78b81a87dcd4c@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-11-03 10:30\nPeso: 30%\nMoodle: https://lms.icex.e
  s/mod/assign/view.php?id=53839\n\nAgenda: https://diegorodsab-alt.github.i
@@ -1873,7 +1873,7 @@ BEGIN:VEVENT
 SUMMARY:📤 Marketing · Caso 1 Velora (PPT en inglés)
 DTSTART:20261116T094500Z
 DTEND:20261116T101500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:72970c967ce1e890ce29@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-11-16 11:15\nPeso: 16%\n\nAgenda: https://diegorod
  sab-alt.github.io/mba-icex-agenda/
@@ -1898,7 +1898,7 @@ SUMMARY:📤 Investigación Comercial II · Informe del estudio de mercado
   (grupal)
 DTSTART:20261127T160000Z
 DTEND:20261127T163000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:db8904c1ab9fdbdfaf3a@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-11-27 17:30\nPeso: 60%\nMoodle: https://lms.icex.e
  s/mod/assign/view.php?id=53403\n\nAgenda: https://diegorodsab-alt.github.i
@@ -1927,7 +1927,7 @@ SUMMARY:🎤 Investigación Comercial II · Presentación oral del estudio
   de mercado (10 min)
 DTSTART:20261201T083000Z
 DTEND:20261201T093000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:df0ae31ac66034e99998@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-12-01 09:30\nPeso: 0%\n\nAgenda: https://diegorods
  ab-alt.github.io/mba-icex-agenda/
@@ -1949,7 +1949,7 @@ SUMMARY:📤 Marketing · Caso 2: plan de marketing (PPT y Word en inglés
  )
 DTSTART:20261204T160000Z
 DTEND:20261204T163000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:9f42d3f8b42d2c007166@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-12-04 17:30\nPeso: 24%\nMoodle: https://lms.icex.e
  s/mod/assign/view.php?id=53398\n\nAgenda: https://diegorodsab-alt.github.i
@@ -1977,7 +1977,7 @@ BEGIN:VEVENT
 SUMMARY:🎤 Marketing · Presentación del Caso 2 (15 min)
 DTSTART:20261209T083000Z
 DTEND:20261209T093000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:26accd3950278500a963@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-12-09 09:30\nPeso: 24%\n\nAgenda: https://diegorod
  sab-alt.github.io/mba-icex-agenda/
@@ -1997,7 +1997,7 @@ SUMMARY:🎤 Habilidades directivas · Rueda de prensa simulada (Terra Pac
  t Summit)
 DTSTART:20261209T121500Z
 DTEND:20261209T131500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:71454a58676446286552@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-12-09 13:15\nPeso: 25%\n\nAgenda: https://diegorod
  sab-alt.github.io/mba-icex-agenda/
@@ -2019,7 +2019,7 @@ SUMMARY:🎤 Dirección estratégica · Presentación oral del plan estrat
  égico (15 min)
 DTSTART:20261210T083000Z
 DTEND:20261210T093000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:56896fa4b126743c3fae@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-12-10 09:30\nPeso: 30%\n\nAgenda: https://diegorod
  sab-alt.github.io/mba-icex-agenda/
@@ -2040,7 +2040,7 @@ BEGIN:VEVENT
 SUMMARY:📤 Comportamiento social · Caso práctico final en grupo
 DTSTART:20261217T160000Z
 DTEND:20261217T163000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:56bba5e488ffd02c9f60@mba-icex-agenda
 DESCRIPTION:Plazo: 2026-12-17 17:30\nPeso: 1/3 de Comportamiento social (2
  5% de la \nMoodle: https://lms.icex.es/mod/assign/view.php?id=53444\n\nAge
@@ -2065,7 +2065,7 @@ BEGIN:VEVENT
 SUMMARY:📤 Taller de escritura · Redacción 1 de 100 palabras
 DTSTART:20270120T173000Z
 DTEND:20270120T180000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:dba9dc6bec33d8e3a288@mba-icex-agenda
 DESCRIPTION:Plazo: 2027-01-20 19:00\nPeso: 12\,5% de la nota virtual\n\nAg
  enda: https://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -2089,7 +2089,7 @@ BEGIN:VEVENT
 SUMMARY:📤 Taller de escritura · Ficha I autoevaluable (campus)
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:a1a58127afbff6b3686c@mba-icex-agenda
 DESCRIPTION:Plazo: 2027-01-31 (sin hora)\n\nAgenda: https://diegorodsab-al
  t.github.io/mba-icex-agenda/
@@ -2113,7 +2113,7 @@ BEGIN:VEVENT
 SUMMARY:📤 Taller de escritura · Redacción 2 de 100 palabras
 DTSTART:20270215T173000Z
 DTEND:20270215T180000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:a49d1e35dd0b323a7c46@mba-icex-agenda
 DESCRIPTION:Plazo: 2027-02-15 19:00\nPeso: 12\,5% de la nota virtual\n\nAg
  enda: https://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -2137,7 +2137,7 @@ BEGIN:VEVENT
 SUMMARY:📤 Taller de escritura · Redacción 3 de 100 palabras
 DTSTART:20270310T173000Z
 DTEND:20270310T180000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:5f6373bf449ee5aefbee@mba-icex-agenda
 DESCRIPTION:Plazo: 2027-03-10 19:00\nPeso: 12\,5% de la nota virtual\n\nAg
  enda: https://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -2162,7 +2162,7 @@ SUMMARY:📤 Taller de escritura · Fichas II y III autoevaluables (campus
  )
 DTSTART;VALUE=DATE:20270315
 DTEND;VALUE=DATE:20270316
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:138416ccb213f661ce4d@mba-icex-agenda
 DESCRIPTION:Plazo: 2027-03-15 (sin hora)\n\nAgenda: https://diegorodsab-al
  t.github.io/mba-icex-agenda/
@@ -2189,7 +2189,7 @@ BEGIN:VEVENT
 SUMMARY:📤 Taller de escritura · Redacción 4 de 100 palabras
 DTSTART:20270405T163000Z
 DTEND:20270405T170000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:009ad92b8c9454a3ba1b@mba-icex-agenda
 DESCRIPTION:Plazo: 2027-04-05 19:00\nPeso: 12\,5% de la nota virtual\n\nAg
  enda: https://diegorodsab-alt.github.io/mba-icex-agenda/
@@ -2213,7 +2213,7 @@ BEGIN:VEVENT
 SUMMARY:📤 Taller de escritura · Fichas IV y V autoevaluables (campus)
 DTSTART;VALUE=DATE:20270426
 DTEND;VALUE=DATE:20270427
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:31f6e4e8c20dea10b6a5@mba-icex-agenda
 DESCRIPTION:Plazo: 2027-04-26 (sin hora)\n\nAgenda: https://diegorodsab-al
  t.github.io/mba-icex-agenda/
@@ -2241,7 +2241,7 @@ SUMMARY:📖 Contabilidad y finanzas · Inicio curso online: lectura de Te
  mas 1.1 y 1.2 (páginas 1-52) de la Nota Técnica.
 DTSTART;VALUE=DATE:20261002
 DTEND;VALUE=DATE:20261003
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:a459530e2ac23a061f89@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2256,7 +2256,7 @@ SUMMARY:📖 Contabilidad y finanzas · Sesión 1: trabajo previo = lectur
  a de las notas técnicas 1.1 y 1.2 (páginas 1-52).
 DTSTART:20261005T104500Z
 DTEND:20261005T111500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:08b7527bcc4770b173e9@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2271,7 +2271,7 @@ SUMMARY:📖 Dirección estratégica · Sesión 1 (Estrategia): leer la pr
  esentación de la sesión 1 y la lección 1 del libro de…
 DTSTART:20261006T070000Z
 DTEND:20261006T073000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:d07e9184dcf203b4e67c@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2286,7 +2286,7 @@ SUMMARY:📖 Economía · Antes de la sesión 1: leer el capítulo 1 del M
  ankiw (Los diez principios de la Economía)
 DTSTART:20261007T070000Z
 DTEND:20261007T073000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:ddb8e1ee295e9393697e@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2301,7 +2301,7 @@ SUMMARY:📖 Investigación Comercial I · Antes de empezar el módulo onl
  ine: leer los capítulos 0 y 00
 DTSTART:20261007T084500Z
 DTEND:20261007T091500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:0b47fdcee9c5682c5a72@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2315,7 +2315,7 @@ BEGIN:VEVENT
 SUMMARY:📌 Marketing · Sesión 2 (política de producto)
 DTSTART:20261008T070000Z
 DTEND:20261008T073000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:c1b251ae81e0d12c152b@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2329,7 +2329,7 @@ SUMMARY:📖 Marketing · Lectura Tema 2 (HBS 'Brand Extension Strategies
  That Drive Market Expansion'
 DTSTART:20261008T070000Z
 DTEND:20261008T073000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:0af53bd83d4035f7832d@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2343,7 +2343,7 @@ BEGIN:VEVENT
 SUMMARY:📖 Economía · Antes de la sesión 2: capítulo 4 del Mankiw
 DTSTART:20261008T084500Z
 DTEND:20261008T091500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:b1a40d1269b6e2d9ec91@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2358,7 +2358,7 @@ SUMMARY:📖 Investigación Comercial I · Contenido necesario para resolv
  er las Actividades 1 y 2: Capítulo 1 (IA: buscar con IA
 DTSTART:20261009T170000Z
 DTEND:20261009T173000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:6c1b324ebfeabd265f24@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2373,7 +2373,7 @@ SUMMARY:📖 Contabilidad y finanzas · Semana 13-16 oct: lectura Tema 1.2
   desde la página 53 (existencias) y Anexo I
 DTSTART;VALUE=DATE:20261013
 DTEND;VALUE=DATE:20261014
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:69f6d2cea46f8278fe38@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2388,7 +2388,7 @@ SUMMARY:📖 Dirección estratégica · Sesión 2 (Orientación estratégi
  ca)
 DTSTART:20261013T070000Z
 DTEND:20261013T073000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:eeab653ed2e3ef005ce7@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2403,7 +2403,7 @@ SUMMARY:📖 Investigación Comercial II · Sesión 2: leer antes la parte
   del Manual correspondiente (cap. 3 fuentes secundarias\, cap
 DTSTART:20261013T084500Z
 DTEND:20261013T091500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:047be10001ed1ad252e8@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2418,7 +2418,7 @@ SUMMARY:📖 Investigación Comercial II · Leer la «Guía para la elabor
  ación del estudio de mercado grupal»
 DTSTART:20261013T084500Z
 DTEND:20261013T091500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:b5bb6d63243734b7e294@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2433,7 +2433,7 @@ SUMMARY:📖 Economía · Antes de la sesión 3: capítulo 5 (Elasticidad
  y su aplicación).
 DTSTART:20261013T104500Z
 DTEND:20261013T111500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:72dc0966d716a0a88aaa@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2448,7 +2448,7 @@ SUMMARY:📖 Sector exterior y UE · Antes de la sesión 1: trabajar la do
  cumentación de la sesión
 DTSTART:20261014T070000Z
 DTEND:20261014T073000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:0882ffa08d70ec05f1ab@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2463,7 +2463,7 @@ SUMMARY:📖 Habilidades directivas · Leer la carpeta del caso TerraPAC y
   los cinco artículos (QR)
 DTSTART:20261014T104500Z
 DTEND:20261014T111500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:2f790570e200b0c4c2f0@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2478,7 +2478,7 @@ SUMMARY:📖 Habilidades directivas · Lectura obligatoria para la sesión
   3 (taller de intereses/posiciones y BATNA
 DTSTART:20261014T104500Z
 DTEND:20261014T111500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:732b2c688a876f018d27@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2493,7 +2493,7 @@ SUMMARY:📖 Sector exterior y UE · Antes de la sesión 2: LECTURA OBLIGA
  TORIA\, capítulo 9 de Mankiw\, 'Aplicación
 DTSTART:20261015T084500Z
 DTEND:20261015T091500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:8d5e812efc9d10b97d00@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2508,7 +2508,7 @@ SUMMARY:📖 Contabilidad y finanzas · Semana 19-23 oct: lectura Anexo II
   (sistema financiero y formas de financiación) y Tema 4
 DTSTART;VALUE=DATE:20261019
 DTEND;VALUE=DATE:20261020
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:375673fb591a16d5e5a0@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2523,7 +2523,7 @@ SUMMARY:📖 Contabilidad y finanzas · Sesión 3 (existencias): lectura n
  otas 1.1 y 1.2 y Anexo I
 DTSTART:20261019T104500Z
 DTEND:20261019T111500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:b28243ed7219e1947727@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2538,7 +2538,7 @@ SUMMARY:📖 Economía · Antes de la sesión 4: capítulo 7 (Consumidores
  \, productores y eficiencia de los mercados).
 DTSTART:20261020T070000Z
 DTEND:20261020T073000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:4d6dea568dd81de826ad@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2553,7 +2553,7 @@ SUMMARY:📖 Investigación Comercial II · Sesión 3: leer antes el Manua
  l sobre encuestas (cap. 6: tipos\, diseño del cuestionario
 DTSTART:20261020T084500Z
 DTEND:20261020T091500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:910a9c47f393cbde626b@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2568,7 +2568,7 @@ SUMMARY:📖 Estrategia avanzada · Lectura obligatoria del dossier del Ca
  so 1
 DTSTART:20261022T070000Z
 DTEND:20261022T073000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:be92d4302db7b21ae356@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2583,7 +2583,7 @@ SUMMARY:📖 Contabilidad y finanzas · Sesión 4 (amortizaciones): lectur
  a notas 1.1 y 1.2 y Anexo I
 DTSTART:20261022T133000Z
 DTEND:20261022T140000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:2c13bf65ce1dda47f210@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2598,7 +2598,7 @@ SUMMARY:📖 Contabilidad y finanzas · Sesión 5: lectura notas 1.1\, 1.2
  \, 4.1 y Anexos I y II
 DTSTART:20261026T114500Z
 DTEND:20261026T121500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:556b526e976ee57a4854@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2612,7 +2612,7 @@ BEGIN:VEVENT
 SUMMARY:📖 Dirección estratégica · Sesión 3 (Análisis del entorno)
 DTSTART:20261027T080000Z
 DTEND:20261027T083000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:9dd6a2bf4878c46b1ed2@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2627,7 +2627,7 @@ SUMMARY:📖 Investigación Comercial II · Sesión 4: leer antes el Manua
  l sobre muestreo (cap. 6\, pp. 73-85)
 DTSTART:20261027T094500Z
 DTEND:20261027T101500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:9777add77c9c5d87410f@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2641,7 +2641,7 @@ BEGIN:VEVENT
 SUMMARY:🎯 Contabilidad y finanzas · Examen parcial resuelto a mano
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:04387345788dfee43354@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2655,7 +2655,7 @@ SUMMARY:📖 Economía · Antes de la sesión 5: capítulos 23 y 24 (datos
   macroeconómicos). Entra en el examen final.
 DTSTART:20261029T080000Z
 DTEND:20261029T083000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:3f348065153188095d1c@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2670,7 +2670,7 @@ SUMMARY:📖 Contabilidad y finanzas · Sesión 6 (análisis de estados fi
  nancieros): lectura notas 2.1 y 2
 DTSTART:20261029T114500Z
 DTEND:20261029T121500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:360a5648973e2c0f3be9@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2685,7 +2685,7 @@ SUMMARY:📖 Dirección estratégica · Sesión 4 (Análisis interno y ven
  tajas competitivas): leer la presentación de la sesión 4
 DTSTART:20261103T080000Z
 DTEND:20261103T083000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:c69834233e85669747f4@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2700,7 +2700,7 @@ SUMMARY:📖 Investigación Comercial II · Sesión 5: leer antes el Manua
  l sobre técnicas mixtas (cap. 8: observación\, store check
 DTSTART:20261103T094500Z
 DTEND:20261103T101500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:e96fd5c61c8c82de7d89@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2715,7 +2715,7 @@ SUMMARY:📖 Economía · Antes de la sesión 6: capítulo 29 (sistema mon
  etario).
 DTSTART:20261104T080000Z
 DTEND:20261104T083000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:d1de7d88296c634ad912@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2730,7 +2730,7 @@ SUMMARY:📖 Habilidades directivas · Sesión 7: simulación en clase de
  entrevistas estructuradas entre delegaciones y debrief
 DTSTART:20261104T114500Z
 DTEND:20261104T121500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:b2b3f0bd8e34f8b51c5f@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2745,7 +2745,7 @@ SUMMARY:📖 Economía · Antes de la sesión 7: capítulo 31 (economías
  abiertas: conceptos básicos).
 DTSTART:20261105T094500Z
 DTEND:20261105T101500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:e383e48a6f158f6b10bb@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2760,7 +2760,7 @@ SUMMARY:📖 Dirección estratégica · Sesión 5 (Herramientas: curva de
  experiencia\, BCG\, multicriterio)
 DTSTART:20261110T080000Z
 DTEND:20261110T083000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:f1d0c38adbcdd1250c86@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2775,7 +2775,7 @@ SUMMARY:📖 Contabilidad y finanzas · Sesión 7: lectura notas 2.1 y 2.2
   y análisis de empresas reales (fichero Excel).
 DTSTART:20261111T114500Z
 DTEND:20261111T121500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:d70522bb201b2ff1b5e5@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2790,7 +2790,7 @@ SUMMARY:📖 Contabilidad y finanzas · Sesión 8: lectura notas 2.1 y 2.2
   y análisis de empresas reales (fichero Excel).
 DTSTART:20261113T080000Z
 DTEND:20261113T083000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:40927ccbd6a94fe0c78e@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2805,7 +2805,7 @@ SUMMARY:📖 Dirección estratégica · Sesión 6 (Alternativas estratégi
  cas): leer la presentación de la sesión 6 (obligatoria) y
 DTSTART:20261113T094500Z
 DTEND:20261113T101500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:e4e1d487757ec5f12288@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2820,7 +2820,7 @@ SUMMARY:📖 Contabilidad y finanzas · Sesión 9 (costes): lectura de la
  nota 3.1 y ejercicios de costes de la sesión 9.
 DTSTART:20261116T114500Z
 DTEND:20261116T121500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:1099001439b566d3db2d@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2835,7 +2835,7 @@ SUMMARY:📖 Dirección estratégica · Sesión 7 (Internacionalización):
   lectura recomendada del punto 5
 DTSTART:20261117T080000Z
 DTEND:20261117T083000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:3281c3b87de8d9a0bba5@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2850,7 +2850,7 @@ SUMMARY:📖 Investigación Comercial II · Sesión 6: el alumno debe trae
  r leído todo el caso Castillo de Canena en Japón
 DTSTART:20261117T094500Z
 DTEND:20261117T101500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:487cb0483c00a55766d8@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2865,7 +2865,7 @@ SUMMARY:📖 Estrategia avanzada · Lectura obligatoria del dossier del Ca
  so 2
 DTSTART:20261117T114500Z
 DTEND:20261117T121500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:f169c9cf6ad381598bb2@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2880,7 +2880,7 @@ SUMMARY:📖 Habilidades directivas · Preparación sesión 9 (crisis): Th
  e Secret to Successful Crisis Management (vídeo)
 DTSTART:20261118T094500Z
 DTEND:20261118T101500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:d93f7af4248f1e66ba3b@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2895,7 +2895,7 @@ SUMMARY:📖 Economía · Antes de la sesión 8: capítulo 32 (teoría mac
  roeconómica de la economía abierta).
 DTSTART:20261119T094500Z
 DTEND:20261119T101500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:ef6ed671b11225323db6@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2910,7 +2910,7 @@ SUMMARY:📖 Marketing · Lectura Tema 4: Google Ads & Commerce 'AI\, pers
  onalization and the future of shopping' (V
 DTSTART:20261123T094500Z
 DTEND:20261123T101500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:cffa16f880de6bac0c78@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2925,7 +2925,7 @@ SUMMARY:📖 Dirección estratégica · Sesión 8 (Implantación de la est
  rategia y Plan\; profesora Mª Cristina Hernández Holgado)
 DTSTART:20261124T080000Z
 DTEND:20261124T083000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:ae13479c4587fa995c00@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2940,7 +2940,7 @@ SUMMARY:📖 Sector exterior y UE · Sesión 8 (comercio digital y nuevos
  desarrollos). Lectura obligatoria
 DTSTART:20261124T114500Z
 DTEND:20261124T121500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:f3e86b1dbb924b2c56b7@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2955,7 +2955,7 @@ SUMMARY:📖 Economía · Antes de la sesión 9: capítulo 33 (demanda y o
  ferta agregadas I).
 DTSTART:20261125T080000Z
 DTEND:20261125T083000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:3c5901fc1b126f2cd1f2@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2970,7 +2970,7 @@ SUMMARY:📖 Contabilidad y finanzas · Sesión 10 (análisis de proyectos
   de inversión): lectura notas 4.2 y 4
 DTSTART:20261126T080000Z
 DTEND:20261126T083000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:d2c67e454a4dde880901@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -2985,7 +2985,7 @@ SUMMARY:📖 Economía · Antes de la sesión 10: capítulo 33 (demanda y
  oferta agregadas II).
 DTSTART:20261126T094500Z
 DTEND:20261126T101500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:3d4294a0730592eb577e@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -3000,7 +3000,7 @@ SUMMARY:📖 Habilidades directivas · Preparación sesión 12: Made to St
  ick
 DTSTART:20261130T080000Z
 DTEND:20261130T083000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:647f4f8a608b1499239b@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -3014,7 +3014,7 @@ BEGIN:VEVENT
 SUMMARY:📖 Contabilidad y finanzas · Sesión 11: lectura notas 4.2 y 4
 DTSTART:20261130T114500Z
 DTEND:20261130T121500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:9b041f97df8a0a08b47e@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -3029,7 +3029,7 @@ SUMMARY:📖 Dirección estratégica · Sesión 9 (Adecuación estrategia/
  estructura): leer la presentación de la sesión 9
 DTSTART:20261202T080000Z
 DTEND:20261202T083000Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:42613ef63f05bacb83fb@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -3044,7 +3044,7 @@ SUMMARY:📖 Economía · Antes de la sesión 11: capítulo 34 (políticas
   monetaria y fiscal y demanda agregada).
 DTSTART:20261203T094500Z
 DTEND:20261203T101500Z
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:91a0dcaf23f9b63587fe@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -3059,7 +3059,7 @@ SUMMARY:📌 Dirección estratégica · El profesor avisará con antelaci
  ón suficiente del formato del examen final (test\, ensayo
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:4cff89d2eea3887057f6@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -3074,7 +3074,7 @@ SUMMARY:📌 Taller de escritura · Inicio del plazo de la Ficha I (1-31 e
  nero)
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270102
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:07fbbba0ad50a1edc009@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -3089,7 +3089,7 @@ SUMMARY:📌 Taller de escritura · Las fichas de ejercicios autoevaluable
  s están disponibles en el campus virtual desde el 7…
 DTSTART;VALUE=DATE:20270107
 DTEND;VALUE=DATE:20270108
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:65574994da79bf6c2993@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -3104,7 +3104,7 @@ SUMMARY:📌 Investigación Comercial II · Sesión 9 de retroalimentació
  n sobre los trabajos\, en enero de 2027
 DTSTART;VALUE=DATE:20270131
 DTEND;VALUE=DATE:20270201
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:07e4095530c47aa84c7c@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -3119,7 +3119,7 @@ SUMMARY:📌 Taller de escritura · Inicio del plazo de las Fichas II y II
  I (1 de febrero a 15 de marzo).
 DTSTART;VALUE=DATE:20270201
 DTEND;VALUE=DATE:20270202
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:1b286b4586dd8171fb1c@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -3134,7 +3134,7 @@ SUMMARY:📌 Taller de escritura · Devolución de la primera redacción c
  orregida\, por el campus virtual.
 DTSTART;VALUE=DATE:20270211
 DTEND;VALUE=DATE:20270212
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:4810581d651ea79d2a77@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -3149,7 +3149,7 @@ SUMMARY:📌 Taller de escritura · Devolución de la segunda redacción c
  orregida. Atención
 DTSTART;VALUE=DATE:20270308
 DTEND;VALUE=DATE:20270309
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:ff3bd80f8bb910935caf@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -3164,7 +3164,7 @@ SUMMARY:📌 Taller de escritura · Inicio del plazo de las Fichas IV y V
  (16 de marzo a 26 de abril).
 DTSTART;VALUE=DATE:20270316
 DTEND;VALUE=DATE:20270317
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:cd06397eab89133fdd44@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -3179,7 +3179,7 @@ SUMMARY:📌 Taller de escritura · Devolución de la tercera redacción c
  orregida.
 DTSTART;VALUE=DATE:20270402
 DTEND;VALUE=DATE:20270403
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:0c6cdab35ec033d059f2@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -3194,7 +3194,7 @@ SUMMARY:📌 Taller de escritura · Empieza la consulta de todas las ficha
  s antes del examen (27 abril a 8 mayo).
 DTSTART;VALUE=DATE:20270427
 DTEND;VALUE=DATE:20270428
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:8a8b2af244eec1f2773f@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -3209,7 +3209,7 @@ SUMMARY:📌 Taller de escritura · Devolución de la cuarta redacción co
  rregida\, solo 4 días antes del examen.
 DTSTART;VALUE=DATE:20270430
 DTEND;VALUE=DATE:20270501
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:a05f46ffdacd7fcc34ba@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM
@@ -3224,7 +3224,7 @@ SUMMARY:📌 Taller de escritura · Fin del periodo de consulta de las fic
  has.
 DTSTART;VALUE=DATE:20270508
 DTEND;VALUE=DATE:20270509
-DTSTAMP:20261009T134030Z
+DTSTAMP:20261009T134851Z
 UID:470739c5a9f19cab6bc9@mba-icex-agenda
 DESCRIPTION:Agenda: https://diegorodsab-alt.github.io/mba-icex-agenda/
 BEGIN:VALARM

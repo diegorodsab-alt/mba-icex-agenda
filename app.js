@@ -1,8 +1,8 @@
 // Agenda MBA ICEX: lee datos.json (lo genera pipeline/web_publica.py) y pinta la vista de la URL (#hoy, #entregas…).
 
-import { h, urlSegura } from "./dom.js?v=58007f184b";
-import * as F from "./fechas.js?v=58007f184b";
-import * as P from "./preferencias.js?v=58007f184b";
+import { h, urlSegura } from "./dom.js?v=9090ccd8c6";
+import * as F from "./fechas.js?v=9090ccd8c6";
+import * as P from "./preferencias.js?v=9090ccd8c6";
 
 const TIPOS = {
   entrega: "Entrega", presentacion: "Presentación", cuestionario: "Cuestionario", lectura: "Lectura",
@@ -135,6 +135,32 @@ function etiquetaAsignatura(slug) {
   return h("span", { class: "etiqueta-asig", style: color(slug) }, nombreAsignatura(slug));
 }
 
+/** Formulario de propuestas ya rellenado: vacío para algo nuevo, o con los datos de x para corregirlo. */
+function enlacePropuesta(x = null) {
+  const form = estado.datos.propuestas;
+  const base = urlSegura(form?.url);
+  if (!base) return null;
+  const url = new URL(base);
+  url.searchParams.set("usp", "pp_url");
+  const poner = (campo, valor) => valor && form.campos[campo] && url.searchParams.set(form.campos[campo], valor);
+  const slug = x?.asignatura ?? estado.filtro;
+  if (slug) poner("asignatura", asignatura(slug) && slug !== "general" ? nombreAsignatura(slug) : form.general);
+  if (x) {
+    poner("titulo", x.titulo);
+    poner("tipo", form.tipos[x.tipo]);
+    poner("fecha", x.fecha);
+    poner("hora", x.hora);
+    poner("ref", x.id);
+  }
+  return url.href;
+}
+
+function proponer(texto = "＋ Proponer una entrega o fecha", clase = "boton boton--primario") {
+  const url = enlacePropuesta();
+  return url && h("a", { class: clase, href: url, target: "_blank", rel: "noopener" }, texto,
+    h("span", { class: "sr" }, " (formulario, se abre en otra pestaña)"));
+}
+
 /** Insignia de cuenta atrás con semáforo: rojo ≤ 3 días, ámbar ≤ 7, verde el resto, gris si ya pasó. */
 function cuentaAtras(x) {
   if (!x.fecha) return h("span", { class: "insignia insignia--neutra" }, "sin fecha");
@@ -155,11 +181,14 @@ function cajaFecha(fecha) {
 function plazo(x, { conFecha = true, hechas = P.hechas() } = {}) {
   const hecha = hechas.has(x.id);
   const url = urlSegura(x.url);
+  const corregir = x.grupo !== "examen" && !yaPaso(x) && enlacePropuesta(x);
   const meta = [
     etiquetaAsignatura(x.asignatura),
     x.grupo !== "examen" && (TIPOS[x.tipo] ?? x.tipo),
     x.hora && x.hora !== "00:00" && `${x.grupo === "entrega" ? "hasta" : "a"} las ${x.hora}`,
     x.hora === "00:00" && `hasta las 00:00 (la noche del ${F.diaCorto(diaLimite(x))})`,
+    x.fecha_moodle && h("span", { class: "aviso-moodle" }, `en Moodle pone ${F.diaCorto(x.fecha_moodle)}${
+      x.fecha_moodle.slice(11, 16) ? ` ${x.fecha_moodle.slice(11, 16)}` : ""}`),
     x.peso && `${x.peso} de la nota`,
     x.voluntario && "voluntaria",
     x.grupo === "entrega" && (x.fuente === "Moodle" ? "en Moodle" : "fecha confirmada"),
@@ -170,8 +199,11 @@ function plazo(x, { conFecha = true, hechas = P.hechas() } = {}) {
     h("div", { class: "plazo__cuerpo" },
       h("p", { class: "plazo__titulo" }, h("span", { class: "icono", "aria-hidden": "true" }, ICONOS[x.tipo] ?? "📌"), x.titulo),
       h("p", { class: "plazo__meta" }, meta.flatMap((m, i) => (i ? [h("span", { class: "sep", "aria-hidden": "true" }, "·"), m] : [m]))),
-      url && h("a", { class: "enlace-ext", href: url, target: "_blank", rel: "noopener" }, "Abrir en Moodle",
-        h("span", { class: "sr" }, " (se abre en otra pestaña)"))),
+      (url || corregir) && h("p", { class: "plazo__enlaces" },
+        url && h("a", { class: "enlace-ext", href: url, target: "_blank", rel: "noopener" }, "Abrir en Moodle",
+          h("span", { class: "sr" }, " (se abre en otra pestaña)")),
+        corregir && h("a", { class: "enlace-ext enlace-ext--suave", href: corregir, target: "_blank", rel: "noopener" },
+          x.fecha ? "¿Fecha incorrecta?" : "¿Sabes la fecha?", h("span", { class: "sr" }, ` Proponer corrección de ${x.titulo}`)))),
     h("div", { class: "plazo__lado" },
       cuentaAtras(x),
       x.grupo === "entrega" && h("label", { class: "hecha" },
@@ -248,7 +280,8 @@ function vistaHoy() {
         seccion(`Mañana, ${F.diaCorto(manana)}`, clasesManana.length ? listaClases(clasesManana) : vacio("Mañana no hay clases."))),
       seccion(`Próximos ${DIAS_HOY} días`,
         pendientes.length ? listaPlazos(pendientes) : vacio("Nada pendiente en las próximas dos semanas."),
-        sinFecha > 0 && h("p", { class: "nota" }, h("a", { href: "#entregas" }, `${sinFecha} entregas aún sin fecha`), " · revisa la pestaña Entregas."))));
+        sinFecha > 0 && h("p", { class: "nota" }, h("a", { href: "#entregas" }, `${sinFecha} entregas aún sin fecha`), " · revisa la pestaña Entregas."),
+        estado.datos.propuestas && h("p", { class: "nota" }, "¿Falta algo? ", proponer("Propón una entrega o fecha", "")))));
 }
 
 function vistaEntregas() {
@@ -260,6 +293,11 @@ function vistaEntregas() {
   const semana = proximas.filter((x) => F.diasEntre(F.hoy(), x.fecha) <= 7).length;
   return h("div", {},
     titulo("Entregas y presentaciones", `${proximas.length} pendientes · ${semana} en los próximos 7 días`),
+    estado.datos.propuestas && h("div", { class: "tarjeta tarjeta--proponer" },
+      h("p", {}, h("strong", {}, "¿Falta algo o una fecha está mal? "),
+        "Si lo dijo el profesor en clase, llegó por correo o la fecha de Moodle no es la real, propónlo. "
+        + "Se revisa antes de publicarse."),
+      proponer()),
     seccion("Próximas", proximas.length ? listaPlazos(proximas) : vacio("No hay entregas pendientes con fecha.")),
     sinFecha.length > 0 && seccion("Sin fecha todavía",
       h("p", { class: "nota" }, "Están en Moodle pero sin fecha límite confirmada."), listaPlazos(sinFecha)),

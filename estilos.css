@@ -266,8 +266,14 @@ main:focus { outline: none; }
 .caja-fecha__dia { font-size: 1.375rem; font-weight: 700; font-variant-numeric: tabular-nums; }
 .caja-fecha--vacia { font-size: 1.25rem; font-weight: 700; color: var(--texto-suave); min-height: 3.5rem; }
 
-.enlace-ext { display: inline-block; margin-top: .25rem; font-size: .875rem; font-weight: 600; padding-block: .25rem; }
+.plazo__enlaces { display: flex; flex-wrap: wrap; gap: 0 1rem; margin-top: .25rem; }
+.enlace-ext { display: inline-block; font-size: .875rem; font-weight: 600; padding-block: .25rem; }
 .enlace-ext::after { content: " ↗"; }
+.enlace-ext--suave { font-weight: 400; color: var(--texto-suave); }
+.aviso-moodle { color: var(--pronto-texto); font-weight: 600; }
+
+.tarjeta--proponer { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; align-items: center; justify-content: space-between; margin-bottom: .5rem; }
+.tarjeta--proponer p { flex: 1 1 20rem; }
 
 .insignia {
   display: inline-block; padding: .125rem .5rem;
