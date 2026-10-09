@@ -1,10 +1,10 @@
 // Agenda MBA ICEX: lee datos.json (lo genera pipeline/web_publica.py) y pinta la vista de la URL (#hoy, #entregas…).
 
-import * as C from "./comunidad.js?v=4a41ae9cdf";
-import { h, urlSegura } from "./dom.js?v=4a41ae9cdf";
-import * as F from "./fechas.js?v=4a41ae9cdf";
-import * as P from "./preferencias.js?v=4a41ae9cdf";
-import { abrirPropuesta } from "./proponer.js?v=4a41ae9cdf";
+import * as C from "./comunidad.js?v=ab01d6ccb5";
+import { h, urlSegura } from "./dom.js?v=ab01d6ccb5";
+import * as F from "./fechas.js?v=ab01d6ccb5";
+import * as P from "./preferencias.js?v=ab01d6ccb5";
+import { abrirPropuesta } from "./proponer.js?v=ab01d6ccb5";
 
 const TIPOS = {
   entrega: "Entrega", presentacion: "Presentación", cuestionario: "Cuestionario", lectura: "Lectura",
@@ -15,7 +15,8 @@ const CANALES = { clase: "lo dijo en clase", correo: "llegó por correo", moodle
 const HORAS_ANTIGUA = 36;     // a partir de aquí se avisa de que la agenda no se ha actualizado
 
 // plazos: lo publicado · comunidad: propuestas en vivo · todos: ambas cosas, recalculado en cada pintado
-const estado = { datos: null, asignaturas: new Map(), plazos: [], comunidad: [], todos: [], filtro: P.filtro(), semana: null };
+const estado = { datos: null, asignaturas: new Map(), plazos: [], comunidad: [], todos: [], filtro: P.filtro(), semana: null,
+  rango: P.rango() };
 const $ = (selector) => document.querySelector(selector);
 
 // ───────────────────────────── datos ─────────────────────────────
@@ -167,10 +168,11 @@ function prepararFiltro() {
 
 // ───────────────────────────── navegación ─────────────────────────────
 
-const VISTAS = { hoy: vistaHoy, entregas: vistaEntregas, examenes: vistaExamenes, horario: vistaHorario, calendario: vistaCalendario };
+const VISTAS = { resumen: vistaResumen, entregas: vistaEntregas, examenes: vistaExamenes, horario: vistaHorario, calendario: vistaCalendario };
 
 function mostrar(enfocar) {
-  const nombre = location.hash.slice(1) in VISTAS ? location.hash.slice(1) : "hoy";
+  const pedida = location.hash.slice(1) === "hoy" ? "resumen" : location.hash.slice(1);   // #hoy: enlaces antiguos
+  const nombre = pedida in VISTAS ? pedida : "resumen";
   for (const enlace of document.querySelectorAll(".pestanas a")) {
     if (enlace.dataset.vista === nombre) enlace.setAttribute("aria-current", "page");
     else enlace.removeAttribute("aria-current");
@@ -306,8 +308,11 @@ function plazo(x, { conFecha = true, hechas = P.hechas() } = {}) {
       (url || corregir) && h("p", { class: "plazo__enlaces" },
         url && h("a", { class: "enlace-ext", href: url, target: "_blank", rel: "noopener" }, "Abrir en Moodle",
           h("span", { class: "sr" }, " (se abre en otra pestaña)")),
-        corregir && h("button", { class: "enlace-boton enlace-boton--suave", type: "button", onclick: () => proponer(x) },
-          x.fecha ? "¿Fecha incorrecta?" : "¿Sabes la fecha?", h("span", { class: "sr" }, ` Proponer corrección de ${x.titulo}`))),
+        corregir && (x.fecha
+          ? h("button", { class: "enlace-boton enlace-boton--suave", type: "button", onclick: () => proponer(x) },
+            "¿Fecha incorrecta?", h("span", { class: "sr" }, ` Proponer otra fecha para ${x.titulo}`))
+          : h("button", { class: "boton boton--pequeno", type: "button", onclick: () => proponer(x) },
+            "📅 Poner fecha", h("span", { class: "sr" }, ` a ${x.titulo}`)))),
       p ? (p.detalle && h("p", { class: "correccion__detalle" }, p.detalle)) : null,
       p ? votacion(p) : correcciones(x.id).map(correccion)),
     h("div", { class: "plazo__lado" },
@@ -341,11 +346,11 @@ function repartir(clases, items) {
   return { porClase, sueltos };
 }
 
-function preparacion(items, hechas) {
+function preparacion(items, hechas, titulo = "Para esta clase", conHora = false) {
   const verbo = (x) => (x.tipo === "presentacion" ? "Presentas" : x.grupo === "entrega" ? "Entregas"
     : x.tipo === "lectura" ? "Leer" : x.grupo === "examen" ? "Examen" : "Preparar");
   return h("div", { class: "preparacion" },
-    h("p", { class: "preparacion__titulo" }, "Para esta clase"),
+    h("p", { class: "preparacion__titulo" }, titulo),
     h("ul", { role: "list" }, items.map((x) => {
       const hecha = hechas.has(x.id);
       return h("li", { class: `preparacion__item${hecha ? " es-hecha" : ""}` },
@@ -354,10 +359,14 @@ function preparacion(items, hechas) {
             P.marcarHecha(x.id, ev.target.checked);
             ev.target.closest(".preparacion__item").classList.toggle("es-hecha", ev.target.checked);
           } }),
-          h("span", { class: `preparacion__verbo preparacion__verbo--${x.grupo}` }, verbo(x)),
+          h("span", { class: "preparacion__contenido" },
+            h("span", { class: "preparacion__cabeza" },
+              h("span", { class: `preparacion__verbo preparacion__verbo--${x.grupo}` }, verbo(x)),
+              conHora && h("span", { class: "preparacion__hora" }, x.hora && x.hora !== "00:00" ? `hasta ${x.hora}` : "sin hora"),
+              conHora && etiquetaAsignatura(x.asignatura)),
           // Dentro de su clase sobra el "Sesión 2 (…):" del principio
           h("span", { class: "preparacion__texto" }, x.titulo.replace(/^(antes de (la )?)?sesi[oó]n \d+[^:]{0,60}:\s*/i, "").replace(/^./, (c) => c.toUpperCase()),
-            x.propuesta && h("span", { class: "etiqueta-mini" }, "por confirmar"))));
+            x.propuesta && h("span", { class: "etiqueta-mini" }, "por confirmar")))));
     })));
 }
 
@@ -389,22 +398,28 @@ function etiquetaDia(dia, hoy) {
   return d === 0 ? `Hoy · ${F.diaLargo(dia)}` : d === 1 ? `Mañana · ${F.diaLargo(dia)}` : F.diaLargo(dia);
 }
 
-/** Un día: sus clases, cada una con lo que hay que preparar, y debajo lo que vence ese día sin clase asociada. */
-function bloqueDia(dia, hoy, { vacioFinde = true } = {}) {
+/** Un día: sus clases, cada una con lo que hay que preparar, y debajo lo que vence ese día sin clase asociada.
+ * soloPendiente: oculta lo que ya ha terminado (y devuelve null si no queda nada) · omitirVacio: sin "Sin clases." */
+function bloqueDia(dia, hoy, { soloPendiente = false, omitirVacio = false } = {}) {
   const hechas = P.hechas();
-  const clases = clasesDe(dia);
-  const examenesHorario = new Set(clases.filter((c) => c.tipo === "examen").map((c) => c.asignatura));
-  const items = estado.todos.filter((x) => x.fecha === dia && pasaFiltro(x) && !(x.grupo === "examen" && examenesHorario.has(x.asignatura)));
+  const ahora = F.ahora();
+  const todas = clasesDe(dia);
+  const terminadas = soloPendiente ? todas.filter((c) => c.fin.slice(0, 16) <= ahora) : [];
+  const clases = todas.filter((c) => !terminadas.includes(c));
+  const examenesHorario = new Set(todas.filter((c) => c.tipo === "examen").map((c) => c.asignatura));
+  const items = estado.todos.filter((x) => x.fecha === dia && pasaFiltro(x) && !(soloPendiente && (yaPaso(x) || hechas.has(x.id)))
+    && !(x.grupo === "examen" && examenesHorario.has(x.asignatura)));
   const finde = [0, 6].includes(new Date(`${dia}T12:00:00Z`).getUTCDay());
-  if (!clases.length && !items.length && (finde || !vacioFinde)) return null;
+  if (!clases.length && !items.length && (finde || omitirVacio || soloPendiente)) return null;
   const { porClase, sueltos } = repartir(clases, items);
   const esHoy = dia === hoy;
   return h("section", { class: `dia${esHoy ? " dia--hoy" : ""}`, "aria-current": esHoy ? "date" : null },
     h("h3", { class: "dia__titulo" }, etiquetaDia(dia, hoy)),
-    clases.length ? listaClases(clases, porClase, hechas) : vacio("Sin clases."),
+    terminadas.length > 0 && h("p", { class: "dia__terminadas" }, "Ya han terminado: ",
+      terminadas.map((c) => `${F.hora(c.inicio)} ${c.asignatura ? nombreAsignatura(c.asignatura) : c.tema}`).join(" · ")),
+    clases.length ? listaClases(clases, porClase, hechas) : !sueltos.length && vacio("Sin clases."),
     sueltos.length > 0 && h("div", { class: "dia__sueltos" },
-      h("p", { class: "preparacion__titulo" }, clases.length ? "Además, este día" : "Este día"),
-      listaPlazos(sueltos, { conFecha: false })));
+      preparacion(sueltos.sort(porFecha), hechas, clases.length ? "Además, este día" : "Este día", true)));
 }
 
 function cifra(etiqueta, valor, pie, tono) {
@@ -418,32 +433,37 @@ function plegable(texto, n, contenido) {
 
 // ───────────────────────────── vistas ─────────────────────────────
 
-function vistaHoy() {
+function vistaResumen() {
   const hoy = F.hoy();
   const ahora = F.ahora();
   const hechas = P.hechas();
   const lunes = F.lunesDe(hoy);
-  const domingo = F.sumarDias(lunes, 6);
+  const lunesSiguiente = F.sumarDias(lunes, 7);
   const dowHoy = (new Date(`${hoy}T12:00:00Z`).getUTCDay() + 6) % 7;   // 0 = lunes
 
   const proxima = estado.datos.clases.find((c) => c.tipo !== "evento" && pasaFiltro(c) && c.fin.slice(0, 16) > ahora);
   const entregas = estado.todos.filter((x) => x.grupo === "entrega" && pasaFiltro(x) && x.fecha && !yaPaso(x)
     && !hechas.has(x.id) && x.voluntario !== true);
-  const estaSemana = entregas.filter((x) => x.fecha <= domingo);
+  const en7 = entregas.filter((x) => F.diasEntre(hoy, x.fecha) <= 7);
   const examen = estado.todos.find((x) => !x.propuesta && x.grupo === "examen" && pasaFiltro(x) && x.fecha && !yaPaso(x));
   const diasExamen = examen && F.diasEntre(hoy, examen.fecha);
 
   let cuandoProxima = "—";
   if (proxima) {
-    const enCurso = proxima.inicio.slice(0, 16) <= ahora;
     const d = F.diasEntre(hoy, proxima.inicio.slice(0, 10));
-    cuandoProxima = enCurso ? "ahora" : d === 0 ? F.hora(proxima.inicio) : d === 1 ? `mañana ${F.hora(proxima.inicio)}`
-      : `${F.partesDia(proxima.inicio).semana} ${F.hora(proxima.inicio)}`;
+    cuandoProxima = proxima.inicio.slice(0, 16) <= ahora ? "ahora" : d === 0 ? F.hora(proxima.inicio)
+      : d === 1 ? `mañana ${F.hora(proxima.inicio)}` : `${F.partesDia(proxima.inicio).semana} ${F.hora(proxima.inicio)}`;
   }
+
   const dias = (desde, n) => Array.from({ length: n }, (_, i) => F.sumarDias(desde, i));
-  const semanaActual = dias(hoy, 7 - dowHoy).map((d) => bloqueDia(d, hoy)).filter(Boolean);
-  const siguiente = dias(F.sumarDias(lunes, 7), 7).map((d) => bloqueDia(d, hoy)).filter(Boolean);
-  const clasesSiguiente = dias(F.sumarDias(lunes, 7), 7).reduce((n, d) => n + clasesDe(d).filter((c) => c.tipo !== "evento").length, 0);
+  // Esta semana: lo que queda de hoy y los días que faltan hasta el domingo, solo con contenido
+  const estaSemana = [bloqueDia(hoy, hoy, { soloPendiente: true }),
+    ...dias(F.sumarDias(hoy, 1), 6 - dowHoy).map((d) => bloqueDia(d, hoy, { omitirVacio: true }))].filter(Boolean);
+  const siguiente = dias(lunesSiguiente, 7).map((d) => bloqueDia(d, hoy)).filter(Boolean);
+  const clasesSiguiente = dias(lunesSiguiente, 7).reduce((n, d) => n + clasesDe(d).filter((c) => c.tipo !== "evento").length, 0);
+  const entregasSiguiente = entregas.filter((x) => x.fecha >= lunesSiguiente && x.fecha <= F.sumarDias(lunesSiguiente, 6)).length;
+  const resumenSiguiente = `${clasesSiguiente} ${clasesSiguiente === 1 ? "clase" : "clases"} · ${entregasSiguiente} `
+    + `${entregasSiguiente === 1 ? "entrega" : "entregas"}`;
 
   return h("div", {},
     titulo(F.diaLargo(hoy)),
@@ -451,18 +471,20 @@ function vistaHoy() {
       cifra("Próxima clase", cuandoProxima,
         proxima ? [proxima.asignatura ? nombreAsignatura(proxima.asignatura) : proxima.tema, proxima.sesion && `S${proxima.sesion}`,
           proxima.aula].filter(Boolean).join(" · ") : "no quedan clases", "azul"),
-      cifra("Entregas esta semana", estaSemana.length,
-        estaSemana.length ? `la primera ${F.relativo(F.diasEntre(hoy, estaSemana[0].fecha))}` : "ninguna pendiente", "verde"),
+      cifra("Entregas · 7 días", en7.length,
+        en7.length ? `la primera ${F.relativo(F.diasEntre(hoy, en7[0].fecha))}` : "ninguna pendiente", "verde"),
       cifra("Próximo examen", examen ? (diasExamen === 0 ? "hoy" : `${diasExamen} d`) : "—",
         examen ? `${nombreAsignatura(examen.asignatura)} · ${F.diaCorto(examen.fecha)}` : "sin exámenes a la vista", "rojo")),
     h("div", { class: "rejilla" },
       h("div", {},
         h("section", { class: "seccion" },
-          h("h3", { class: "seccion__titulo seccion__titulo--grande" }, "Lo que queda de semana"),
-          semanaActual.length ? semanaActual : vacio("No queda nada esta semana.")),
-        h("details", { class: "plegable plegable--semana", open: dowHoy >= 3 || !semanaActual.length },
-          h("summary", {}, `Semana que viene · ${F.rangoSemana(F.sumarDias(lunes, 7))}`,
-            h("span", { class: "plegable__resumen" }, ` ${clasesSiguiente} clases`)),
+          h("h3", { class: "seccion__titulo seccion__titulo--grande" }, "Esta semana"),
+          estaSemana.length ? estaSemana : h("div", { class: "tarjeta tarjeta--suave" },
+            h("p", {}, h("strong", {}, "Esta semana ya no queda nada pendiente. "),
+              `La semana que viene tienes ${resumenSiguiente}.`))),
+        h("details", { class: "plegable plegable--semana", open: dowHoy >= 3 || !estaSemana.length },
+          h("summary", {}, `La semana que viene · ${F.rangoSemana(lunesSiguiente)}`,
+            h("span", { class: "plegable__resumen" }, resumenSiguiente)),
           siguiente.length ? siguiente : vacio("Sin clases."))),
       h("aside", { class: "lateral", "aria-label": "Próximas entregas" },
         seccion("Próximas entregas",
@@ -472,32 +494,92 @@ function vistaHoy() {
             h("button", { class: "enlace-boton", type: "button", onclick: () => proponer() }, "Propón una entrega o fecha"))))));
 }
 
+const RANGOS = [["7", "7 días"], ["14", "14 días"], ["30", "30 días"], ["todo", "Todo"], ["elegir", "Elegir fechas"]];
+
+function limitesRango(r, hoy) {
+  if (r.tipo === "todo") return [hoy, "9999-12-31"];
+  if (r.tipo === "elegir") return [r.desde || hoy, r.hasta || "9999-12-31"];
+  return [hoy, F.sumarDias(hoy, Number(r.tipo))];
+}
+
+function textoRango(r, hoy) {
+  if (r.tipo === "todo") return "Todas las pendientes";
+  if (r.tipo === "elegir") {
+    const [desde, hasta] = limitesRango(r, hoy);
+    return hasta.startsWith("9999") ? `Desde el ${F.diaCorto(desde)}` : `Del ${F.diaCorto(desde)} al ${F.diaCorto(hasta)}`;
+  }
+  return `Próximos ${r.tipo} días`;
+}
+
+/** Botones de plazo (7/14/30 días, todo o fechas a elegir); la elección se recuerda entre visitas. */
+function barraRango() {
+  const r = estado.rango;
+  const cambiar = (nuevo, enfocar) => {
+    estado.rango = nuevo;
+    P.ponerRango(nuevo);
+    mostrar(false);
+    document.querySelector(enfocar)?.focus();
+  };
+  return h("div", { class: "barra-rango" },
+    h("div", { class: "barra-rango__opciones", role: "group", "aria-label": "Qué plazos mostrar" },
+      RANGOS.map(([tipo, texto]) => h("button", {
+        class: "chip", type: "button", "aria-pressed": String(r.tipo === tipo), "data-rango": tipo,
+        onclick: () => cambiar({ ...r, tipo }, `[data-rango="${tipo}"]`),
+      }, texto))),
+    r.tipo === "elegir" && h("div", { class: "barra-rango__fechas" },
+      h("label", {}, "Desde", h("input", { type: "date", value: r.desde || F.hoy(), "data-campo": "desde",
+        onchange: (ev) => cambiar({ ...r, desde: ev.target.value }, '[data-campo="desde"]') })),
+      h("label", {}, "Hasta", h("input", { type: "date", value: r.hasta || "", min: r.desde || F.hoy(), "data-campo": "hasta",
+        onchange: (ev) => cambiar({ ...r, hasta: ev.target.value }, '[data-campo="hasta"]') }))));
+}
+
 function vistaEntregas() {
+  const hoy = F.hoy();
   const hechas = P.hechas();
   const todas = estado.todos.filter((x) => x.grupo === "entrega" && pasaFiltro(x));
-  const proximas = todas.filter((x) => x.fecha && !yaPaso(x) && !hechas.has(x.id));
+  const pendientes = todas.filter((x) => x.fecha && !yaPaso(x) && !hechas.has(x.id));
+  const [desde, hasta] = limitesRango(estado.rango, hoy);
+  // Con fechas elegidas a mano también puede mirarse atrás (lo ya pasado sin marcar como hecho)
+  const enRango = todas.filter((x) => x.fecha && x.fecha >= desde && x.fecha <= hasta && !hechas.has(x.id)
+    && (estado.rango.tipo === "elegir" || !yaPaso(x)));
+  const despues = pendientes.filter((x) => x.fecha > hasta);
   const sinFecha = todas.filter((x) => !x.fecha && !hechas.has(x.id));
   const cerradas = todas.filter((x) => hechas.has(x.id) || yaPaso(x)).sort((a, b) => porFecha(b, a));
-  const domingo = F.sumarDias(F.lunesDe(F.hoy()), 6);
+  const domingo = F.sumarDias(F.lunesDe(hoy), 6);
   const domingoSiguiente = F.sumarDias(domingo, 7);
   const tramos = [
-    ["Esta semana", proximas.filter((x) => x.fecha <= domingo)],
-    [`La semana que viene · ${F.rangoSemana(F.sumarDias(domingo, 1))}`, proximas.filter((x) => x.fecha > domingo && x.fecha <= domingoSiguiente)],
-    ["Más adelante", proximas.filter((x) => x.fecha > domingoSiguiente)],
-  ];
+    ["Pasadas", enRango.filter((x) => yaPaso(x))],
+    ["Esta semana", enRango.filter((x) => !yaPaso(x) && x.fecha <= domingo)],
+    [`La semana que viene · ${F.rangoSemana(F.sumarDias(domingo, 1))}`, enRango.filter((x) => x.fecha > domingo && x.fecha <= domingoSiguiente)],
+    ["Más adelante", enRango.filter((x) => x.fecha > domingoSiguiente)],
+  ].filter(([, items]) => items.length);
+  const siguienteFuera = despues[0];
+
   return h("div", {},
-    titulo("Entregas y presentaciones", [`${tramos[0][1].length} esta semana`, `${proximas.length} pendientes`,
-      sinFecha.length && `${sinFecha.length} sin fecha`].filter(Boolean).join(" · ")),
+    titulo("Entregas y presentaciones", [`${pendientes.length} pendientes`, sinFecha.length && `${sinFecha.length} sin fecha`]
+      .filter(Boolean).join(" · ")),
     comunidad() && h("div", { class: "tarjeta tarjeta--proponer" },
       h("p", {}, h("strong", {}, "¿Falta algo o una fecha está mal? "),
         "Si lo dijo el profesor en clase, llegó por correo o la fecha de Moodle no es la real, propónlo: lo ve toda la clase "
         + "al momento y queda verificado cuando lo confirman otros compañeros."),
       h("button", { class: "boton boton--primario", type: "button", onclick: () => proponer() }, "＋ Proponer")),
-    proximas.length ? tramos.filter(([, items]) => items.length).map(([nombre, items]) =>
+    barraRango(),
+    h("p", { class: "resumen-rango", "aria-live": "polite" },
+      h("strong", {}, textoRango(estado.rango, hoy)), `: ${enRango.length} ${enRango.length === 1 ? "entrega" : "entregas"}`),
+    tramos.length ? tramos.map(([nombre, items]) =>
       seccion(h("span", {}, nombre, h("span", { class: "contador" }, items.length)), listaPlazos(items)))
-      : vacio("No hay entregas pendientes con fecha."),
-    sinFecha.length > 0 && seccion("Sin fecha todavía",
-      h("p", { class: "nota" }, "Están en Moodle pero sin fecha límite confirmada. Si sabes la fecha, pulsa «¿Sabes la fecha?»."),
+      : h("div", { class: "tarjeta tarjeta--suave" },
+        h("p", {}, "No hay entregas pendientes en este plazo.",
+          siguienteFuera && ` La siguiente es «${siguienteFuera.titulo}», ${F.relativo(F.diasEntre(hoy, siguienteFuera.fecha))} (${F.diaCorto(siguienteFuera.fecha)}).`),
+        siguienteFuera && h("button", { class: "boton boton--pequeno", type: "button",
+          onclick: () => { estado.rango = { tipo: "todo" }; P.ponerRango(estado.rango); mostrar(false); } }, "Ver todas")),
+    despues.length > 0 && tramos.length > 0 && h("p", { class: "nota" }, `Y ${despues.length} más adelante. `,
+      h("button", { class: "enlace-boton", type: "button",
+        onclick: () => { estado.rango = { tipo: "todo" }; P.ponerRango(estado.rango); mostrar(false); } }, "Ver todas")),
+    sinFecha.length > 0 && seccion(h("span", {}, "Sin fecha todavía", h("span", { class: "contador" }, sinFecha.length)),
+      h("p", { class: "nota" }, comunidad()
+        ? "Están en Moodle pero sin fecha límite. Si sabes cuándo se entregan, pulsa «Poner fecha»: lo verá toda la clase."
+        : "Están en Moodle pero sin fecha límite confirmada."),
       listaPlazos(sinFecha)),
     plegable("Pasadas y hechas", cerradas.length, listaPlazos(cerradas)));
 }

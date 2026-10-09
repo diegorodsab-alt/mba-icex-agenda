@@ -54,3 +54,7 @@ export function ponerVoto(propuesta, voto) {
 
 export const mias = () => new Set(leer().mias ?? []);
 export const anadirMia = (propuesta) => guardar({ ...leer(), mias: [...mias(), propuesta] });
+
+// Plazo de la pestaña Entregas: { tipo: "7" | "14" | "30" | "todo" | "elegir", desde, hasta }
+export const rango = () => leer().rango ?? { tipo: "30" };
+export const ponerRango = (valor) => guardar({ ...leer(), rango: valor });

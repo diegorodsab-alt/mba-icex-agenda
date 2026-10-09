@@ -2,8 +2,8 @@
 // Esc para cerrar) y lo mínimo para escribir: atajos de fecha ("próxima clase", "mañana"…) y, mientras escribes, las
 // entregas parecidas que ya existen, para confirmarlas en vez de duplicarlas.
 
-import { h } from "./dom.js?v=4a41ae9cdf";
-import * as F from "./fechas.js?v=4a41ae9cdf";
+import { h } from "./dom.js?v=ab01d6ccb5";
+import * as F from "./fechas.js?v=ab01d6ccb5";
 
 const TIPOS = [["entrega", "Entrega"], ["presentacion", "Presentación"], ["lectura", "Lectura"], ["examen", "Examen"], ["otro", "Otro"]];
 const CANALES = [["clase", "En clase"], ["correo", "Por correo"], ["moodle", "Moodle está mal"], ["otro", "Otro"]];
@@ -33,6 +33,8 @@ function grupoRadios(nombre, leyenda, opciones, elegida) {
 export function abrirPropuesta(ctx, item = null) {
   const origen = document.activeElement;
   const corrigiendo = Boolean(item);
+  const poniendo = corrigiendo && !item.fecha;   // entrega sin fecha: se propone la primera
+  const textoEnviar = poniendo ? "Proponer fecha" : corrigiendo ? "Proponer cambio" : "Proponer";
   const hoy = F.hoy();
   const ahora = F.ahora();
 
@@ -53,7 +55,7 @@ export function abrirPropuesta(ctx, item = null) {
   const atajos = h("div", { class: "atajos", role: "group", "aria-label": "Atajos de fecha" });
   const sugerencias = h("div", { class: "sugerencias", "aria-live": "polite" });
   const error = h("p", { class: "dialogo__error", role: "alert", hidden: true });
-  const botonEnviar = h("button", { class: "boton boton--primario", type: "submit" }, corrigiendo ? "Proponer cambio" : "Proponer");
+  const botonEnviar = h("button", { class: "boton boton--primario", type: "submit" }, textoEnviar);
 
   // Atajos: la próxima clase de la asignatura (muchas entregas son "para la próxima clase"), mañana, viernes, en una semana
   function pintarAtajos() {
@@ -113,7 +115,7 @@ export function abrirPropuesta(ctx, item = null) {
 
   const formulario = h("form", { class: "dialogo__form", novalidate: true },
     h("header", { class: "dialogo__cabecera" },
-      h("h2", { id: "dialogo-titulo" }, corrigiendo ? "Corregir fecha" : "Proponer una entrega o fecha"),
+      h("h2", { id: "dialogo-titulo" }, poniendo ? "Poner fecha" : corrigiendo ? "Corregir fecha" : "Proponer una entrega o fecha"),
       h("button", { class: "dialogo__cerrar", type: "button", "aria-label": "Cerrar", onclick: () => cerrar() }, "✕")),
     corrigiendo
       ? h("p", { class: "dialogo__contexto" }, h("strong", {}, item.titulo), h("br"),
@@ -121,10 +123,10 @@ export function abrirPropuesta(ctx, item = null) {
       : [campo("Asignatura", selAsignatura), campo("¿Qué hay que hacer?", inTitulo), sugerencias,
         grupoRadios("tipo", "Tipo", TIPOS, "entrega")],
     h("div", { class: "campo-doble" },
-      campo(corrigiendo ? "Fecha correcta" : "Fecha límite", inFecha),
+      campo(corrigiendo && !poniendo ? "Fecha correcta" : "Fecha límite", inFecha),
       campo("Hora", inHora, "Opcional")),
     atajos,
-    grupoRadios("canal", "¿Cómo lo sabéis?", CANALES, corrigiendo ? "correo" : "clase"),
+    grupoRadios("canal", "¿Cómo lo sabéis?", CANALES, corrigiendo && !poniendo ? "correo" : "clase"),
     h("details", { class: "dialogo__mas" }, h("summary", {}, "Añadir detalles"), inDetalle),
     !ctx.yo.nombre && campo("Tu nombre", inNombre, "Opcional. Solo lo ve quien mantiene la agenda, no sale publicado."),
     error,
@@ -168,7 +170,7 @@ export function abrirPropuesta(ctx, item = null) {
     } catch (e) {
       mostrarError(e);
       botonEnviar.disabled = false;
-      botonEnviar.textContent = corrigiendo ? "Proponer cambio" : "Proponer";
+      botonEnviar.textContent = textoEnviar;
     }
   });
 
