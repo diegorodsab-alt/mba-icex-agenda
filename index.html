@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
   <meta name="referrer" content="no-referrer">
   <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="Horario, entregas y exámenes del MBA ICEX (Grupo C), con calendario para suscribirse.">
@@ -14,8 +14,8 @@
   <link rel="icon" href="icono.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icono.svg">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="estilos.css?v=9090ccd8c6">
-  <script type="module" src="app.js?v=9090ccd8c6"></script>
+  <link rel="stylesheet" href="estilos.css?v=4a41ae9cdf">
+  <script type="module" src="app.js?v=4a41ae9cdf"></script>
 </head>
 <body>
   <a class="saltar" href="#principal">Saltar al contenido</a>
@@ -26,6 +26,7 @@
         <h1 class="cabecera__titulo">Agenda MBA ICEX</h1>
         <p class="cabecera__sub"><span id="grupo">Grupo C</span> · <span id="actualizado" aria-live="polite">cargando…</span></p>
       </div>
+      <button id="proponer" class="boton boton--primario cabecera__proponer" type="button" hidden>＋ Proponer</button>
       <label class="filtro">
         <span class="sr">Filtrar por asignatura</span>
         <select id="filtro" disabled>
@@ -53,6 +54,8 @@
     <noscript><p class="aviso aviso--error">Esta agenda necesita JavaScript. Puedes suscribirte directamente al
       <a href="calendario.ics">calendario</a>.</p></noscript>
   </main>
+
+  <p id="toast" class="toast" role="status" hidden></p>
 
   <footer class="pie contenedor">
     <p>Generado a partir del horario oficial, Moodle y la guía del máster. Puede contener errores:
