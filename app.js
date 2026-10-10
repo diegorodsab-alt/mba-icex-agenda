@@ -1,12 +1,12 @@
 // Agenda MBA ICEX: lee datos.json (lo genera pipeline/web_publica.py) y pinta la vista de la URL (#hoy, #entregas…).
 
-import * as C from "./comunidad.js?v=0d5032fccf";
-import { h, urlSegura } from "./dom.js?v=0d5032fccf";
-import * as F from "./fechas.js?v=0d5032fccf";
-import * as P from "./preferencias.js?v=0d5032fccf";
-import { coincideFicha, ordenarSesiones, separarEvaluacion } from "./asignaturas.js?v=0d5032fccf";
-import { abrirPropuesta } from "./proponer.js?v=0d5032fccf";
-import { resolverReferencia, propuestaSinDestino } from "./referencias.js?v=0d5032fccf";
+import * as C from "./comunidad.js?v=12b38a024e";
+import { h, urlSegura } from "./dom.js?v=12b38a024e";
+import * as F from "./fechas.js?v=12b38a024e";
+import * as P from "./preferencias.js?v=12b38a024e";
+import { coincideFicha, ordenarSesiones, separarEvaluacion } from "./asignaturas.js?v=12b38a024e";
+import { abrirPropuesta } from "./proponer.js?v=12b38a024e";
+import { resolverReferencia, propuestaSinDestino } from "./referencias.js?v=12b38a024e";
 
 const TIPOS = {
   entrega: "Entrega", presentacion: "Presentación", cuestionario: "Cuestionario", lectura: "Lectura",
@@ -181,30 +181,42 @@ function prepararFiltro() {
 // ───────────────────────────── navegación ─────────────────────────────
 
 const VISTAS = { resumen: vistaResumen, entregas: vistaEntregas, examenes: vistaExamenes, asignaturas: vistaAsignaturas, horario: vistaHorario,
-  calendario: vistaCalendario };
+  calendario: vistaCalendario, mas: vistaMas };
 
 function mostrar(enfocar) {
   const pedida = location.hash.slice(1) === "hoy" ? "resumen" : location.hash.slice(1);   // #hoy: enlaces antiguos
   const disponible = pedida in VISTAS && (pedida !== "asignaturas" || estado.datos.fichas?.length);
   const nombre = disponible ? pedida : "resumen";
   for (const enlace of document.querySelectorAll(".pestanas a")) {
-    if (enlace.dataset.vista === nombre) enlace.setAttribute("aria-current", "page");
+    if (enlace.dataset.vista === nombre || (enlace.dataset.vista === "mas" && ["horario", "calendario"].includes(nombre))) enlace.setAttribute("aria-current", "page");
     else enlace.removeAttribute("aria-current");
   }
   estado.todos = todosLosPlazos();
-  pintar(nombre !== "calendario" && avisoFiltro(),
+  pintar(!["calendario", "mas"].includes(nombre) && avisoFiltro(),
     estado.comunidadError && h("p", { class: "aviso", role: "status" },
       "Las propuestas de compañeros no están disponibles ahora. Las fechas de la agenda siguen visibles. ",
       h("button", { class: "enlace-boton", type: "button", onclick: () => cargarComunidad() }, "Reintentar")), VISTAS[nombre]());
-  document.title = `${$(".pestanas a[aria-current]").textContent.trim()} · Agenda MBA ICEX`;
+  document.title = `${$(`.pestanas a[data-vista="${nombre}"]`).textContent.trim()} · Agenda MBA ICEX`;
   // Al cambiar de sección con el teclado o un lector de pantalla, el foco va al título de la nueva vista
-  if (enfocar) $("#vista h2")?.focus({ preventScroll: true });
+  if (enfocar) {
+    window.scrollTo(0, 0);
+    $("#vista h2")?.focus({ preventScroll: true });
+  }
 }
 
 function pintar(...nodos) {
   const vista = $("#vista");
   vista.replaceChildren(...nodos.filter(Boolean));
   vista.setAttribute("aria-busy", "false");
+}
+
+function vistaMas() {
+  return h("div", {}, titulo("Más", "Horario y calendario de la agenda"),
+    h("ul", { class: "menu-secciones" },
+      h("li", {}, h("a", { href: "#horario" }, h("strong", {}, "Horario"),
+        h("span", {}, "Clases y preparación de cada semana"), h("span", { class: "menu-secciones__flecha", "aria-hidden": "true" }, "›"))),
+      h("li", {}, h("a", { href: "#calendario" }, h("strong", {}, "Calendario"),
+        h("span", {}, "Suscribirte a los plazos y las clases"), h("span", { class: "menu-secciones__flecha", "aria-hidden": "true" }, "›")))));
 }
 
 // ───────────────────────────── piezas ─────────────────────────────
@@ -584,11 +596,11 @@ function vistaEntregas() {
   return h("div", {},
     titulo("Entregas y presentaciones", [`${todas.length} tareas en total`, `${pendientes.length} pendientes`, sinFecha.length && `${sinFecha.length} sin fecha`]
       .filter(Boolean).join(" · ")),
-    comunidad() && h("div", { class: "tarjeta tarjeta--proponer" },
-      h("p", {}, h("strong", {}, "¿Falta algo o una fecha está mal? "),
-        "Si lo dijo el profesor en clase, llegó por correo o la fecha de Moodle no es la real, propónlo: lo ve toda la clase "
-        + "al momento y queda verificado cuando lo confirman otros compañeros."),
-      h("button", { class: "boton boton--primario", type: "button", onclick: () => proponer() }, "＋ Proponer")),
+    comunidad() && h("details", { class: "ayuda-plazos" },
+      h("summary", {}, "¿Falta una entrega o un plazo está mal?"),
+      h("p", {}, "Usa «Proponer» para añadir una tarea o «Cambiar fecha» en la entrega. "
+        + "Puedes indicar lo que dijo el profesor en clase, por correo o una corrección a Moodle. "
+        + "La propuesta se ve al momento y se verifica cuando la confirman otros compañeros.")),
     barraRango(),
     h("p", { class: "resumen-rango", "aria-live": "polite" },
       h("strong", {}, textoRango(estado.rango, hoy)), `: ${enRango.length} ${enRango.length === 1 ? "entrega" : "entregas"}`),

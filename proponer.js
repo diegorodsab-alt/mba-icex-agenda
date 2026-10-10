@@ -2,8 +2,8 @@
 // Esc para cerrar) y lo mínimo para escribir: atajos de fecha ("próxima clase", "mañana"…) y, mientras escribes, las
 // entregas parecidas que ya existen, para confirmarlas en vez de duplicarlas.
 
-import { h } from "./dom.js?v=0d5032fccf";
-import * as F from "./fechas.js?v=0d5032fccf";
+import { h } from "./dom.js?v=12b38a024e";
+import * as F from "./fechas.js?v=12b38a024e";
 
 const TIPOS = [["entrega", "Entrega"], ["presentacion", "Presentación"], ["lectura", "Lectura"], ["examen", "Examen"], ["otro", "Otro"]];
 const CANALES = [["clase", "En clase"], ["correo", "Por correo"], ["moodle", "Moodle está mal"], ["otro", "Otro"]];

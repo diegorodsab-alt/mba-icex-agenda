@@ -2,7 +2,7 @@
 // disponible (modo privado, bloqueado) la agenda funciona igual, solo que no recuerda nada.
 
 const CLAVE = "agenda-mba-icex:v1";
-import { migrarHechas } from "./referencias.js?v=0d5032fccf";
+import { migrarHechas } from "./referencias.js?v=12b38a024e";
 let memoria = {};
 
 function leer() {
