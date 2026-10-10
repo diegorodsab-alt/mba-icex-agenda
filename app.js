@@ -1,10 +1,12 @@
 // Agenda MBA ICEX: lee datos.json (lo genera pipeline/web_publica.py) y pinta la vista de la URL (#hoy, #entregas…).
 
-import * as C from "./comunidad.js?v=ab01d6ccb5";
-import { h, urlSegura } from "./dom.js?v=ab01d6ccb5";
-import * as F from "./fechas.js?v=ab01d6ccb5";
-import * as P from "./preferencias.js?v=ab01d6ccb5";
-import { abrirPropuesta } from "./proponer.js?v=ab01d6ccb5";
+import * as C from "./comunidad.js?v=0d5032fccf";
+import { h, urlSegura } from "./dom.js?v=0d5032fccf";
+import * as F from "./fechas.js?v=0d5032fccf";
+import * as P from "./preferencias.js?v=0d5032fccf";
+import { coincideFicha, ordenarSesiones, separarEvaluacion } from "./asignaturas.js?v=0d5032fccf";
+import { abrirPropuesta } from "./proponer.js?v=0d5032fccf";
+import { resolverReferencia, propuestaSinDestino } from "./referencias.js?v=0d5032fccf";
 
 const TIPOS = {
   entrega: "Entrega", presentacion: "Presentación", cuestionario: "Cuestionario", lectura: "Lectura",
@@ -16,7 +18,7 @@ const HORAS_ANTIGUA = 36;     // a partir de aquí se avisa de que la agenda no 
 
 // plazos: lo publicado · comunidad: propuestas en vivo · todos: ambas cosas, recalculado en cada pintado
 const estado = { datos: null, asignaturas: new Map(), plazos: [], comunidad: [], todos: [], filtro: P.filtro(), semana: null,
-  rango: P.rango() };
+  rango: P.rango(), busqueda: "", comunidadError: false };
 const $ = (selector) => document.querySelector(selector);
 
 // ───────────────────────────── datos ─────────────────────────────
@@ -37,6 +39,7 @@ async function cargar() {
 
 function iniciar(datos) {
   estado.datos = datos;
+  P.actualizarReferencias(datos.referencias ?? {});
   estado.asignaturas = new Map(datos.asignaturas.map((a) => [a.slug, a]));
   // Entregas, exámenes y otras fechas en una sola lista de "plazos" con la misma forma
   estado.plazos = [
@@ -55,6 +58,7 @@ function iniciar(datos) {
     aviso.hidden = false;
   }
   prepararFiltro();
+  $("#pestana-asignaturas").hidden = !datos.fichas?.length;
   window.addEventListener("hashchange", () => mostrar(true));
   document.addEventListener("visibilitychange", () => document.visibilityState === "visible" && cargarComunidad());
   if (comunidad()) {
@@ -75,8 +79,10 @@ async function cargarComunidad() {
   if (!comunidad()) return mostrar(false);
   try {
     estado.comunidad = await C.leer(comunidad().url);
+    estado.comunidadError = false;
   } catch (error) {
     console.warn("Propuestas de la clase no disponibles:", error);
+    estado.comunidadError = true;
   }
   if (!document.querySelector("dialog[open]")) mostrar(false);
 }
@@ -89,14 +95,15 @@ function propuestasVivas() {
 }
 
 function todosLosPlazos() {
-  const nuevas = propuestasVivas().filter((p) => !p.ref && p.fecha).map((p) => ({
+  const visibles = new Set(estado.plazos.map((x) => x.id));
+  const nuevas = propuestasVivas().filter((p) => p.fecha && propuestaSinDestino(p, visibles, estado.datos.referencias)).map((p) => ({
     id: `p${p.id}`, fecha: p.fecha, hora: p.hora || null, asignatura: p.asignatura, titulo: p.titulo, tipo: p.tipo, propuesta: p,
     grupo: p.tipo === "examen" ? "examen" : ["entrega", "presentacion"].includes(p.tipo) ? "entrega" : "fecha",
   }));
   return [...estado.plazos, ...nuevas].sort(porFecha);
 }
 
-const correcciones = (id) => propuestasVivas().filter((p) => p.ref === id);
+const correcciones = (id) => propuestasVivas().filter((p) => resolverReferencia(p.ref, estado.datos.referencias) === id);
 
 function aviso(texto) {
   const toast = $("#toast");
@@ -155,7 +162,12 @@ const diaLimite = (x) => (x.hora === "00:00" ? F.sumarDias(x.fecha, -1) : x.fech
 function prepararFiltro() {
   const select = $("#filtro");
   const ordenadas = [...estado.asignaturas.values()].sort((a, b) => a.corto.localeCompare(b.corto, "es"));
-  select.append(...ordenadas.map((a) => h("option", { value: a.slug }, a.corto)));
+  const hoy = F.hoy(), hasta = F.sumarDias(hoy, 42);
+  const actuales = new Set(estado.datos.clases.filter((c) => c.inicio.slice(0, 10) >= hoy && c.inicio.slice(0, 10) <= hasta).map((c) => c.asignatura));
+  for (const [texto, activas] of [["Con clases próximas", true], ["Otras asignaturas", false]]) {
+    const opciones = ordenadas.filter((a) => actuales.has(a.slug) === activas);
+    if (opciones.length) select.append(h("optgroup", { label: texto }, opciones.map((a) => h("option", { value: a.slug }, a.corto))));
+  }
   if (!estado.asignaturas.has(estado.filtro)) estado.filtro = "";
   select.value = estado.filtro;
   select.disabled = false;
@@ -168,18 +180,23 @@ function prepararFiltro() {
 
 // ───────────────────────────── navegación ─────────────────────────────
 
-const VISTAS = { resumen: vistaResumen, entregas: vistaEntregas, examenes: vistaExamenes, horario: vistaHorario, calendario: vistaCalendario };
+const VISTAS = { resumen: vistaResumen, entregas: vistaEntregas, examenes: vistaExamenes, asignaturas: vistaAsignaturas, horario: vistaHorario,
+  calendario: vistaCalendario };
 
 function mostrar(enfocar) {
   const pedida = location.hash.slice(1) === "hoy" ? "resumen" : location.hash.slice(1);   // #hoy: enlaces antiguos
-  const nombre = pedida in VISTAS ? pedida : "resumen";
+  const disponible = pedida in VISTAS && (pedida !== "asignaturas" || estado.datos.fichas?.length);
+  const nombre = disponible ? pedida : "resumen";
   for (const enlace of document.querySelectorAll(".pestanas a")) {
     if (enlace.dataset.vista === nombre) enlace.setAttribute("aria-current", "page");
     else enlace.removeAttribute("aria-current");
   }
   estado.todos = todosLosPlazos();
-  pintar(nombre !== "calendario" && avisoFiltro(), VISTAS[nombre]());
-  document.title = `${$(".pestanas a[aria-current]").lastChild.textContent.trim()} · Agenda MBA ICEX`;
+  pintar(nombre !== "calendario" && avisoFiltro(),
+    estado.comunidadError && h("p", { class: "aviso", role: "status" },
+      "Las propuestas de compañeros no están disponibles ahora. Las fechas de la agenda siguen visibles. ",
+      h("button", { class: "enlace-boton", type: "button", onclick: () => cargarComunidad() }, "Reintentar")), VISTAS[nombre]());
+  document.title = `${$(".pestanas a[aria-current]").textContent.trim()} · Agenda MBA ICEX`;
   // Al cambiar de sección con el teclado o un lector de pantalla, el foco va al título de la nueva vista
   if (enfocar) $("#vista h2")?.focus({ preventScroll: true });
 }
@@ -286,7 +303,10 @@ function plazo(x, { conFecha = true, hechas = P.hechas() } = {}) {
   const hecha = hechas.has(x.id);
   const url = urlSegura(x.url);
   const p = x.propuesta;
-  const corregir = comunidad() && !p && !yaPaso(x) && /^[mh]\d+$/.test(x.id);
+  const corregir = comunidad() && !p && /^[mh]\d+$/.test(x.id);
+  const relacionadas = (estado.datos.relacionados ?? []).filter((g) => g.includes(x.id))
+    .flatMap((g) => g).filter((id) => id !== x.id)
+    .map((id) => estado.plazos.find((item) => item.id === id)).filter(Boolean);
   const meta = [
     etiquetaAsignatura(x.asignatura),
     x.grupo !== "examen" && x.tipo !== "entrega" && (TIPOS[x.tipo] ?? x.tipo),
@@ -296,7 +316,7 @@ function plazo(x, { conFecha = true, hechas = P.hechas() } = {}) {
       x.fecha_moodle.slice(11, 16) ? ` ${x.fecha_moodle.slice(11, 16)}` : ""}`),
     x.peso && h("span", { class: "etiqueta-mini" }, `${x.peso} de la nota`),
     x.voluntario && h("span", { class: "etiqueta-mini" }, "voluntaria"),
-    p && `propuesta de la clase (${CANALES[p.canal] ?? p.canal})`,
+    p && `${p.ref ? "corrección pendiente de revisión" : "propuesta de la clase"} (${CANALES[p.canal] ?? p.canal})`,
   ].filter(Boolean);
   const clases = ["plazo", !conFecha && "plazo--sin-caja", hecha && "es-hecha", yaPaso(x) && "es-pasada",
     p && `es-propuesta es-propuesta--${C.situacion(p, comunidad()?.quorum ?? 2).replace(" ", "-")}`];
@@ -305,12 +325,17 @@ function plazo(x, { conFecha = true, hechas = P.hechas() } = {}) {
     h("div", { class: "plazo__cuerpo" },
       h("p", { class: "plazo__titulo" }, h("span", { class: "icono", "aria-hidden": "true" }, ICONOS[x.tipo] ?? "📌"), x.titulo),
       h("p", { class: "plazo__meta" }, meta.flatMap((m, i) => (i ? [h("span", { class: "sep", "aria-hidden": "true" }, "·"), m] : [m]))),
+      relacionadas.length > 0 && h("details", { class: "plazo__relacionados" },
+        h("summary", {}, "Otra tarea del mismo caso"),
+        relacionadas.map((r) => h("p", { class: "nota" },
+          `${TIPOS[r.tipo]}: ${r.titulo} · ${r.fecha ? F.diaCorto(r.fecha) : "sin fecha confirmada"}`,
+          r.hora && ` ${r.hora}`, hechas.has(r.id) && " · hecha"))),
       (url || corregir) && h("p", { class: "plazo__enlaces" },
         url && h("a", { class: "enlace-ext", href: url, target: "_blank", rel: "noopener" }, "Abrir en Moodle",
           h("span", { class: "sr" }, " (se abre en otra pestaña)")),
         corregir && (x.fecha
           ? h("button", { class: "enlace-boton enlace-boton--suave", type: "button", onclick: () => proponer(x) },
-            "¿Fecha incorrecta?", h("span", { class: "sr" }, ` Proponer otra fecha para ${x.titulo}`))
+            "📅 Cambiar fecha", h("span", { class: "sr" }, ` Proponer otra fecha para ${x.titulo}`))
           : h("button", { class: "boton boton--pequeno", type: "button", onclick: () => proponer(x) },
             "📅 Poner fecha", h("span", { class: "sr" }, ` a ${x.titulo}`)))),
       p ? (p.detalle && h("p", { class: "correccion__detalle" }, p.detalle)) : null,
@@ -385,7 +410,8 @@ function clase(c, deberes = [], hechas = P.hechas()) {
     h("div", { class: "clase__cuerpo" },
       h("p", { class: "clase__titulo" }, nombre),
       detalle && h("p", { class: "clase__meta" }, detalle),
-      deberes.length > 0 && preparacion(deberes, hechas)),
+      deberes.length > 0 && preparacion(deberes, hechas),
+      materialesClase(c)),
     enCurso && h("span", { class: "insignia insignia--ahora" }, "Ahora"));
 }
 
@@ -556,7 +582,7 @@ function vistaEntregas() {
   const siguienteFuera = despues[0];
 
   return h("div", {},
-    titulo("Entregas y presentaciones", [`${pendientes.length} pendientes`, sinFecha.length && `${sinFecha.length} sin fecha`]
+    titulo("Entregas y presentaciones", [`${todas.length} tareas en total`, `${pendientes.length} pendientes`, sinFecha.length && `${sinFecha.length} sin fecha`]
       .filter(Boolean).join(" · ")),
     comunidad() && h("div", { class: "tarjeta tarjeta--proponer" },
       h("p", {}, h("strong", {}, "¿Falta algo o una fecha está mal? "),
@@ -578,8 +604,8 @@ function vistaEntregas() {
         onclick: () => { estado.rango = { tipo: "todo" }; P.ponerRango(estado.rango); mostrar(false); } }, "Ver todas")),
     sinFecha.length > 0 && seccion(h("span", {}, "Sin fecha todavía", h("span", { class: "contador" }, sinFecha.length)),
       h("p", { class: "nota" }, comunidad()
-        ? "Están en Moodle pero sin fecha límite. Si sabes cuándo se entregan, pulsa «Poner fecha»: lo verá toda la clase."
-        : "Están en Moodle pero sin fecha límite confirmada."),
+        ? "Entregas documentadas con fecha pendiente de confirmar. Si conoces el plazo real, pulsa «Poner fecha»: lo verá toda la clase."
+        : "Entregas documentadas con fecha pendiente de confirmar."),
       listaPlazos(sinFecha)),
     plegable("Pasadas y hechas", cerradas.length, listaPlazos(cerradas)));
 }
@@ -615,6 +641,123 @@ function vistaHorario() {
         "aria-label": "Volver a la semana actual" }, "Hoy"),
       h("button", { class: "boton", type: "button", onclick: mover(7) }, "Siguiente ›")),
     bloques.filter(Boolean));
+}
+
+// ───────────────────────────── asignaturas (fichas de los documentos de Moodle y la guía) ─────────────────────────────
+
+const IMPORTANCIAS = [["imprescindible", "Imprescindibles"], ["examen", "Para el examen"], ["consulta", "De consulta"]];
+
+function enlaceDocumento(d) {
+  const url = urlSegura(d.url);
+  return url ? h("a", { href: url, target: "_blank", rel: "noopener" }, d.titulo, h("span", { class: "sr" }, " (Moodle, se abre en otra pestaña)"))
+    : h("span", {}, d.titulo);
+}
+
+function materialesClase(c) {
+  const f = estado.datos.fichas?.find((x) => x.slug === c.asignatura);
+  const sesion = f?.sesiones.find((x) => x.n === c.sesion);
+  if (!sesion || c.tipo !== "clase") return null;
+  const docs = sesion.documentos.map((i) => f.documentos[i]).filter(Boolean).slice(0, 3);
+  return h("div", { class: "materiales-clase" },
+    docs.length > 0 && h("p", {}, "Material: ", docs.map((d, i) => [i ? " · " : "", enlaceDocumento(d)])),
+    h("a", { href: "#asignaturas", onclick: () => {
+      estado.filtro = c.asignatura;
+      $("#filtro").value = c.asignatura;
+      estado.busqueda = "";
+    } }, "Ver preparación y ficha"));
+}
+
+function evaluacion(f) {
+  const ev = f.evaluacion;
+  const { ordinaria, otras } = separarEvaluacion(ev.componentes);
+  const tabla = (componentes) => h("table", { class: "tabla-ev" },
+    h("caption", { class: "sr" }, `Evaluación de ${nombreAsignatura(f.slug)}`),
+    h("thead", {}, h("tr", {}, h("th", { scope: "col" }, "Qué"), h("th", { scope: "col" }, "Peso"), h("th", { scope: "col" }, "Detalle"))),
+    h("tbody", {}, componentes.map((c) => h("tr", {}, h("td", {}, c.elemento), h("td", {}, c.peso || "—"), h("td", {}, c.detalle)))));
+  return h("div", {},
+    ordinaria.length ? tabla(ordinaria)
+      : h("p", { class: "nota" }, "Evaluación pendiente de identificar. Consulta el syllabus en Moodle."),
+    otras.length > 0 && h("details", { class: "plegable" }, h("summary", {}, "Otras convocatorias"), tabla(otras)),
+    ev.fuente && h("p", { class: "nota" }, `Según ${ev.fuente}.`),
+    ev.avisos.map((a) => h("p", { class: "aviso-ev" }, `⚠ ${a}`)),
+    f.criterios.map((c) => h("p", { class: "nota" }, "Cómo se corrige ", c.url ? enlaceDocumento({ titulo: c.documento, url: c.url }) : c.documento,
+      `: ${c.criterios.join(" · ")}`)));
+}
+
+function sesionAsignatura(f, s, hoy) {
+  const docs = s.documentos.map((i) => f.documentos[i]).filter(Boolean);
+  const tareas = [
+    ...s.lecturas.map((x) => [x.obligatoria ? "📖 Leer" : "📖 Recomendado", x.que, false]),
+    ...s.preparar.map((x) => [x.entregable ? "📤 Entregar" : "✏️ Preparar", x.que, x.grupo]),
+  ];
+  return h("li", { class: `sesion-asig${s.fecha === hoy ? " es-hoy" : ""}` },
+    h("p", { class: "sesion-asig__cabeza" }, h("strong", {}, `S${s.n}`), ` · ${F.diaCorto(s.fecha)}`,
+      s.fecha === hoy && h("span", { class: "insignia insignia--ahora" }, "Hoy")),
+    s.contenido && h("p", { class: "sesion-asig__contenido" }, s.contenido),
+    tareas.length > 0 && h("ul", { class: "sesion-asig__tareas", role: "list" }, tareas.map(([verbo, que, grupo]) =>
+      h("li", {}, h("span", { class: "sesion-asig__verbo" }, verbo), ` ${que}`, grupo ? " (en grupo)" : ""))),
+    docs.length > 0 && h("p", { class: "sesion-asig__docs" }, "📄 ", docs.map((d, i) => [i ? " · " : "", enlaceDocumento(d)])));
+}
+
+function fichaAsignatura(f, hoy, abierta) {
+  const examen = estado.datos.examenes.find((x) => x.asignatura === f.slug && x.fecha >= hoy);
+  const pesos = separarEvaluacion(f.evaluacion.componentes).ordinaria.filter((c) => c.peso).slice(0, 3).map((c) => `${c.elemento} ${c.peso}`);
+  const { proximas, pasadas } = ordenarSesiones(f.sesiones, hoy);
+  const sesiones = (lista) => h("ol", { class: "lista-sesiones", role: "list" }, lista.map((s) => sesionAsignatura(f, s, hoy)));
+  return h("details", { class: "asig", "data-asignatura": f.slug, style: color(f.slug), open: abierta },
+    h("summary", { class: "asig__cabeza" },
+      h("span", { class: "asig__nombre" }, nombreAsignatura(f.slug)),
+      h("span", { class: "asig__resumen" }, [examen && `${examen.titulo} ${F.diaCorto(examen.fecha)}`, ...pesos].filter(Boolean).join(" · ")
+        || "Sin detalles de evaluación")),
+    h("div", { class: "asig__cuerpo" },
+      f.cobertura?.pendientes > 0 && h("p", { class: "aviso cobertura", role: "status" },
+        `Ficha en preparación: ${f.cobertura.leidas} de ${f.cobertura.total} fuentes leídas. Faltan ${f.cobertura.pendientes}; algunos apartados pueden estar incompletos.`),
+      seccion("Cómo se evalúa", evaluacion(f)),
+      seccion("Próximas sesiones", proximas.length ? sesiones(proximas.slice(0, 3)) : vacio("No quedan sesiones."),
+        plegable("Más sesiones", Math.max(0, proximas.length - 3), sesiones(proximas.slice(3))),
+        plegable("Sesiones pasadas", pasadas.length, sesiones(pasadas))),
+      (f.sin_sesion?.lecturas.length > 0 || f.sin_sesion?.preparar.length > 0) && seccion("Preparación sin sesión asignada",
+        h("ul", { class: "puntos" }, [...f.sin_sesion.lecturas, ...f.sin_sesion.preparar].map((x) => h("li", {}, x.que)))),
+      seccion("Documentos", IMPORTANCIAS.map(([clave, nombre]) => {
+        const docs = f.documentos.filter((d) => d.importancia === clave);
+        return docs.length > 0 && h("div", { class: "grupo-docs" }, h("h4", { class: "grupo-docs__titulo" }, nombre),
+          h("ul", { class: "lista-docs", role: "list" }, docs.map((d) => h("li", {},
+            h("p", { class: "lista-docs__titulo" }, enlaceDocumento(d)),
+            h("p", { class: "lista-docs__que" }, d.que_es),
+            (d.sesiones.length > 0 || d.idioma === "en") && h("p", { class: "lista-docs__meta" },
+              [d.sesiones.length && `Sesión ${d.sesiones.join(", ")}`, d.idioma === "en" && "en inglés"].filter(Boolean).join(" · "))))));
+      })),
+      f.normas.length > 0 && seccion("Normas", h("ul", { class: "puntos" }, f.normas.map((n) => h("li", {}, n))))));
+}
+
+function vistaAsignaturas() {
+  const hoy = F.hoy();
+  const fichas = estado.datos.fichas.filter((f) => !estado.filtro || f.slug === estado.filtro);
+  const tarjetas = h("div", { class: "asignaturas" }, fichas.map((f) => fichaAsignatura(f, hoy, fichas.length === 1)));
+  const vacia = h("p", { class: "vacio", role: "status", hidden: true }, "No hay coincidencias. Prueba otro término o quita el filtro.");
+  const recuento = h("p", { class: "nota", "aria-live": "polite" });
+  const buscar = (texto) => {
+    estado.busqueda = texto;
+    let n = 0;
+    for (const tarjeta of tarjetas.children) {
+      const f = fichas.find((x) => x.slug === tarjeta.dataset.asignatura);
+      tarjeta.hidden = !coincideFicha(f, texto, nombreAsignatura(f.slug));
+      if (!tarjeta.hidden) {
+        n += 1;
+        if (texto.trim()) tarjeta.open = true;
+      }
+    }
+    vacia.hidden = n > 0;
+    recuento.textContent = `${n} ${n === 1 ? "asignatura" : "asignaturas"} · busca un documento, caso, lectura o tema`;
+  };
+  const input = h("input", { type: "search", id: "buscar-material", value: estado.busqueda, placeholder: "Ej. caso, elasticidad, Tema 2…",
+    oninput: (e) => buscar(e.target.value) });
+  buscar(estado.busqueda);
+  return h("div", {},
+    titulo("Asignaturas", "Evaluación, preparación de las próximas clases y materiales de Moodle."),
+    h("label", { class: "buscador", for: "buscar-material" }, "Buscar en los materiales", input), recuento,
+    fichas.length ? [tarjetas, vacia] : vacio("No hay ficha de esta asignatura todavía."),
+    h("p", { class: "nota" }, "Fuentes: documentos de Moodle y guía del máster. Los enlaces piden iniciar sesión en Moodle."));
 }
 
 function vistaCalendario() {

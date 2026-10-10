@@ -66,6 +66,15 @@ h1, h2, h3, p, ul, ol { margin: 0; }
 a { color: var(--enlace); }
 a:hover { text-decoration-thickness: 2px; }
 
+[hidden] { display: none !important; }
+.buscador { display: grid; gap: .4rem; max-width: 36rem; margin-block: 1rem .5rem; font-weight: 600; }
+.buscador input { font: inherit; color: var(--texto); background: var(--superficie); border: 1px solid var(--borde);
+  border-radius: var(--radio); padding: .65rem .8rem; width: 100%; min-height: 44px; }
+.materiales-clase { margin-top: .7rem; font-size: .875rem; display: grid; gap: .3rem; }
+.materiales-clase p { color: var(--texto-suave); }
+.cobertura { margin-bottom: 1rem; }
+.asig, .lista-docs li, .sesion-asig { overflow-wrap: anywhere; }
+
 :focus-visible {
   outline: 3px solid var(--foco);
   outline-offset: 2px;
@@ -158,6 +167,9 @@ a:hover { text-decoration-thickness: 2px; }
   }
   .pestanas a[aria-current="page"] { border-top-color: var(--acento); }
   .pestanas__icono { display: block; font-size: 1.125rem; line-height: 1.2; }
+  /* Con seis pestañas no cabe "Asignaturas": en el móvil se lee "Materias" (el lector de pantalla sigue leyendo el nombre largo) */
+  .pestanas__texto[data-corto] { font-size: 0; }
+  .pestanas__texto[data-corto]::after { content: attr(data-corto); font-size: .6875rem; }
 }
 
 /* ───────── estructura ───────── */
@@ -390,6 +402,44 @@ main:focus { outline: none; }
 
 .pie { padding-block: 1.5rem 2.5rem; font-size: .8125rem; color: var(--texto-suave); border-top: 1px solid var(--borde); display: grid; gap: .25rem; }
 
+/* ───────── asignaturas ───────── */
+
+.asignaturas { display: grid; gap: .75rem; margin-top: 1rem; }
+.asig {
+  --asignatura: var(--asig-claro, var(--borde));
+  background: var(--superficie); border: 1px solid var(--borde); border-left: 6px solid var(--asignatura);
+  border-radius: var(--radio); box-shadow: var(--sombra);
+}
+@media (prefers-color-scheme: dark) { .asig { --asignatura: var(--asig-oscuro, var(--borde)); } }
+.asig__cabeza { display: grid; gap: .125rem; padding: .875rem 1rem; min-height: 44px; cursor: pointer; }
+.asig__nombre { font-weight: 700; font-size: 1.0625rem; }
+.asig__resumen { font-size: .875rem; color: var(--texto-suave); }
+.asig__cuerpo { padding: 0 1rem 1rem; }
+.asig__cuerpo .seccion { margin-top: 1rem; }
+
+.tabla-ev { width: 100%; border-collapse: collapse; font-size: .875rem; }
+.tabla-ev th { font-size: .75rem; color: var(--texto-suave); text-align: left; padding-bottom: .25rem; }
+.tabla-ev td { padding: .375rem .75rem .375rem 0; border-top: 1px solid var(--borde); vertical-align: top; }
+.tabla-ev td:nth-child(2) { white-space: nowrap; font-weight: 700; }
+.aviso-ev { margin-top: .5rem; padding: .5rem .75rem; font-size: .8125rem; background: var(--pronto-fondo); color: var(--pronto-texto); border-radius: 8px; }
+
+.lista-sesiones { list-style: none; padding: 0; display: grid; gap: .5rem; }
+.sesion-asig { padding: .625rem .75rem; background: var(--superficie-2); border-radius: 8px; display: grid; gap: .25rem; font-size: .875rem; }
+.sesion-asig.es-hoy { outline: 2px solid var(--asignatura); }
+.sesion-asig__cabeza { display: flex; align-items: center; gap: .5rem; }
+.sesion-asig__contenido { color: var(--texto-suave); }
+.sesion-asig__tareas { list-style: none; padding: 0; display: grid; gap: .125rem; }
+.sesion-asig__verbo { font-weight: 600; }
+.sesion-asig__docs { color: var(--texto-suave); }
+
+.grupo-docs + .grupo-docs { margin-top: .75rem; }
+.grupo-docs__titulo { font-size: .8125rem; text-transform: uppercase; letter-spacing: .04em; color: var(--texto-suave); margin-bottom: .25rem; }
+.lista-docs { list-style: none; padding: 0; display: grid; gap: .625rem; }
+.lista-docs__titulo { font-weight: 600; }
+.lista-docs__que { font-size: .875rem; }
+.lista-docs__meta { font-size: .75rem; color: var(--texto-suave); }
+.puntos { padding-left: 1.25rem; display: grid; gap: .25rem; font-size: .875rem; }
+
 /* ───────── propuestas de la clase ───────── */
 
 .es-propuesta { border-style: dashed; border-left-style: solid; }
@@ -512,3 +562,6 @@ main:focus { outline: none; }
   .pestanas, .filtro, .navegar-semana, .hecha, .acciones { display: none; }
   .clase, .plazo { box-shadow: none; break-inside: avoid; }
 }
+/* Las tareas de un mismo caso mantienen plazos y controles separados. */
+.plazo__relacionados { margin: .45rem 0; font-size: .85rem; }
+.plazo__relacionados summary { cursor: pointer; }

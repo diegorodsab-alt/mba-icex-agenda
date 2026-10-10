@@ -2,16 +2,20 @@
 // disponible (modo privado, bloqueado) la agenda funciona igual, solo que no recuerda nada.
 
 const CLAVE = "agenda-mba-icex:v1";
+import { migrarHechas } from "./referencias.js?v=0d5032fccf";
+let memoria = {};
 
 function leer() {
   try {
-    return JSON.parse(localStorage.getItem(CLAVE)) ?? {};
+    const datos = JSON.parse(localStorage.getItem(CLAVE));
+    return datos && typeof datos === "object" && !Array.isArray(datos) ? datos : memoria;
   } catch {
-    return {};
+    return memoria;
   }
 }
 
 function guardar(datos) {
+  memoria = datos;
   try {
     localStorage.setItem(CLAVE, JSON.stringify(datos));
   } catch {
@@ -23,6 +27,13 @@ export const filtro = () => leer().filtro ?? "";
 export const ponerFiltro = (slug) => guardar({ ...leer(), filtro: slug });
 
 export const hechas = () => new Set(leer().hechas ?? []);
+export function actualizarReferencias(aliases) {
+  const previas = hechas();
+  const actuales = migrarHechas(previas, aliases);
+  if (actuales.size !== previas.size || [...actuales].some((id) => !previas.has(id))) {
+    guardar({ ...leer(), hechas: [...actuales] });
+  }
+}
 export function marcarHecha(id, hecha) {
   const conjunto = hechas();
   if (hecha) conjunto.add(id);
